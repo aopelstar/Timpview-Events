@@ -1,0 +1,46 @@
+.songs {
+    background-color: #011533;
+    width: 85%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    margin: 7%;
+    border-radius: 10%;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px;
+    font-size: 1em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+.titles {
+    margin-bottom: 20px;
+}
+
+.arrows {
+display: flex;
+justify-content: space-between;
+
+
+}
+
+.arrow1 {
+    height: 50px;
+    transform: scaleX(-1);
+    margin: 20px;
+    position: absolute;
+    bottom: 75px;
+    left: 35px;
+    
+    
+}
+
+.arrow2 {
+    height: 50px;
+    margin: 20px;
+    position: absolute;
+    bottom: 75px;
+    right: 35px;
+}
