@@ -15,8 +15,15 @@
 }
 
 
+
+
 .titles {
     margin-bottom: 20px;
+    
+}
+
+.titles2 {
+    color: darkgrey;
 }
 
 .arrows {
@@ -32,7 +39,7 @@ justify-content: space-between;
     margin: 20px;
     position: absolute;
     bottom: 75px;
-    left: 35px;
+    left: 25px;
     
     
 }
@@ -42,5 +49,24 @@ justify-content: space-between;
     margin: 20px;
     position: absolute;
     bottom: 75px;
-    right: 35px;
+    right: 25px;
+}
+
+.btn {
+
+    background-color: #230133;
+    color: #fff;
+    align-content: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    border-color: #fff;
+    border-width: 1px;
+    text-align: center;
+    width:30%;
+    height: 35px;
+    position: absolute;
+    left: 35%;
+    bottom: 105px;
+
+    
 }

@@ -27,7 +27,7 @@ export default class Header extends Component {
             
             </div>
 
-            <div className={this.state.slide? 'menu-slide menu':'menu'}>
+            <div className={ this.state.slide ? 'menu-slide menu':'menu'}>
             <ul>
                <Link to ='/login'><li>Login</li></Link>
                <Link to = '/home'> <li>Home</li></Link>

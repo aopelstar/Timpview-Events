@@ -43,7 +43,9 @@ export default class Event extends Component {
         return(
             <div>
                 <Header/>
-                <E_populate/>
+                <E_populate groom ={this.state.groomName} bride ={this.state.brideName}
+                 gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}
+                 time = {this.state.time} venue = {this.state.venue} />
             </div>
         )
     }

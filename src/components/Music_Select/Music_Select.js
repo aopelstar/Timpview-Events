@@ -14,6 +14,21 @@ export default class Music_Select extends Component {
         }
     }
 
+    addSong(value){
+        let newArray = this.state.addedSongs;
+        var index = newArray.indexOf(value)
+        if(index != -1){
+            newArray.splice(index, 1)
+        } else {
+        newArray.push(value)
+        }
+
+
+        this.setState({
+            addedSongs: newArray
+        })
+
+    }
     componentDidMount(){
         let promise = axios.get('/api/music')
         promise.then(response => {
@@ -41,14 +56,20 @@ export default class Music_Select extends Component {
         }
     }
 
+    submit(){
+        let body = {
+            songs: this.state.addedSongs
+        }
+    }
+
 
     render() {
         let songs = this.state.songInfo.filter( (e,i) => i >= this.state.index && i < this.state.index+5).map((e,i) => {
             return(
-                <p key ={i}>
-                    <div className = 'titles'>{e.song} by {e.artist}
-                    <div> {e.album} {e.decade}</div></div>
-                </p>
+                <div key ={i} onClick={ ()=> this.addSong(e.id) }>
+                    <div className = {this.state.addedSongs.includes(e.id) ? 'titles titles2' : 'titles' }>{e.song} by {e.artist}
+                    <p> {e.album} {e.decade}</p></div>
+                </div>
             )
         })
         return(
@@ -62,6 +83,7 @@ export default class Music_Select extends Component {
                     <button onClick={ (event) => this.incrementDown(event.target.value)}>
                         <img src = { image } className="arrow1"/>
                     </button>
+                    <button className ="btn" onclick={event => this.submit(event.target.value)}>Submit</button>
                     <button onClick={ (event) => this.incrementUp(event.target.value)}>
                         <img src = { image } className="arrow2"/>
                     </button>
