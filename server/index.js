@@ -31,6 +31,8 @@ app.delete( '/api/corp/:id', wController.delete );
 
 //music endpoints
 app.get('/api/music', wController.getMusic )
+app.post('/api/playlist/:id', wController.createPlaylist) 
+app.get('/api/playlist/:id', wController.getPlaylist)
 
 
 

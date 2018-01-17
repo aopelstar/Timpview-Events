@@ -18,7 +18,7 @@ export default (
         <Route path = '/about' component = { About } />
         <Route path = '/price' component = { Price } />
         <Route path = '/event/:id' component = { Events } />
-        <Route path = '/music' component = { Music } />
+        <Route path = '/music/:id' component = { Music } />
         <Route path = '/login' component = { Login } />
         <Route path = '/createw' component = { Create_wed } />
         <Route path = '/createc' component = { Create_party } />

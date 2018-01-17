@@ -36,5 +36,24 @@ module.exports ={
         .catch( (e) =>{
              res.status(500).send('you done screwed up') });
         
+    }, 
+
+    createPlaylist: ( req, res, next ) => {
+        const dbInstance = req.app.get('db');
+        const { songs } = req.body;
+        let promiseArray = songs.map(element =>{
+
+            return dbInstance.playlist.create_playlist( [req.params.id, element])
+        })
+        let promise = Promise.all( promiseArray )
+        promise.then(res.send('you did it!'))
+        .catch(e=> {
+            console.log(e);
+            res.status(500).send('problem in database')})
+        
+    },
+
+    getPlaylist: (req, res, next ) => {
+
     }
 }

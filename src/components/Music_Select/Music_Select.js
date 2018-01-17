@@ -16,7 +16,7 @@ export default class Music_Select extends Component {
 
     addSong(value){
         let newArray = this.state.addedSongs;
-        var index = newArray.indexOf(value)
+        let index = newArray.indexOf(value)
         if(index != -1){
             newArray.splice(index, 1)
         } else {
@@ -58,8 +58,16 @@ export default class Music_Select extends Component {
 
     submit(){
         let body = {
-            songs: this.state.addedSongs
+            songs: this.state.addedSongs,
+            eventID: this.props.match.params.id
         }
+        console.log(body)
+
+        let promise = axios.post("/api/playlist/"+this.props.match.params.id, body)
+        promise.then(({data}) => {
+            this.props.history.push('/event/'+this.props.match.params.id)
+        })
+
     }
 
 
@@ -83,7 +91,7 @@ export default class Music_Select extends Component {
                     <button onClick={ (event) => this.incrementDown(event.target.value)}>
                         <img src = { image } className="arrow1"/>
                     </button>
-                    <button className ="btn" onclick={event => this.submit(event.target.value)}>Submit</button>
+                    <button className ="btn" onClick={() => this.submit()}>Submit</button>
                     <button onClick={ (event) => this.incrementUp(event.target.value)}>
                         <img src = { image } className="arrow2"/>
                     </button>

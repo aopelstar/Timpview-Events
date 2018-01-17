@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import './Create.css';
-import axios from 'axios'
+import axios from 'axios';
+
+
 export default class Create_wed extends Component {
     constructor(){
         super();
