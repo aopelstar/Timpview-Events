@@ -23,7 +23,7 @@ export default class Event extends Component {
     } 
 
     componentDidMount(){
-        let promise = axios.get('/api/wedding/'+this.props.match.params.id)
+        let promise = axios.get('/api/corp/'+this.props.match.params.id)
         promise.then( ({data}) => {
             this.setState({
                 groomName: data.groom_name,

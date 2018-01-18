@@ -5,6 +5,7 @@ import Welcome from './components/Home/Home';
 import About from './components/About/About';
 import Price from './components/Price/Price';
 import Events from './components/Event/Event';
+import Cevents from './components/Event/Cevent';
 import Music from './components/Music_Select/Music_Select';
 import Login from './components/Login/Login'
 import Create_wed from './components/Create/Create_wed'
@@ -18,6 +19,7 @@ export default (
         <Route path = '/about' component = { About } />
         <Route path = '/price' component = { Price } />
         <Route path = '/event/:id' component = { Events } />
+        <Route path = '/cevent/:id' component = { Cevents } />
         <Route path = '/music/:id' component = { Music } />
         <Route path = '/login' component = { Login } />
         <Route path = '/createw' component = { Create_wed } />

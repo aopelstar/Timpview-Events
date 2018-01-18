@@ -54,6 +54,14 @@ module.exports ={
     },
 
     getPlaylist: (req, res, next ) => {
+        const dbInstance = req.app.get('db');
 
+        dbInstance.playlist.find_playlist( [req.params.id] )
+        .then( (result) => {
+            console.log(result);
+            res.status(200).send(result) })
+        .catch( error => {
+            res.status(500).send("whatevs")
+        })
     }
 }

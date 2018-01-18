@@ -36,5 +36,5 @@ app.get('/api/playlist/:id', wController.getPlaylist)
 
 
 
-const port = process.env.PORT || 3030
+const port = process.env.SERVER_PORT || 3030
 app.listen( port, () => { console.log(`Everything is just really sexy on on port ${port}'`)}) 
