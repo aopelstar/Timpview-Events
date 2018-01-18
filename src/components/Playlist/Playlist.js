@@ -22,8 +22,16 @@ export default class Playlist extends Component {
     }
 
     render(){
+        let songs = this.state.songInfo.map((songs, i) => {
+            <div key = {i}>
+            <div className = "titles">{songs.song} by {songs.artist}
+            <p>{songs.album} {songs.decade}</p></div>
+            </div>
+        })
+        
         return(
             <div className = "songs">
+            
                 </div>
         )
     }
