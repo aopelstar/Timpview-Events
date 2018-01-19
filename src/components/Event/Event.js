@@ -4,6 +4,7 @@ import Playlist from '../Playlist/Playlist'
 import axios from 'axios';
 import E_populate from './E_populate/E_populate'
 import { Link } from 'react-router-dom';
+import './Event.css'
 
 
 
@@ -40,6 +41,12 @@ export default class Event extends Component {
 
     }
 
+    delete(){
+        let promise = axios.delete('/api/wedding/'+this.props.match.params.id)
+        promise.then( () => {
+            this.props.history.push('/home')})
+    }
+
     render() {
         return(
             <div>
@@ -48,8 +55,13 @@ export default class Event extends Component {
                  gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}
                  time = {this.state.time} venue = {this.state.venue} />
 
-                <Link to ={ '/music/'+this.props.match.params.id}>Feel free to create or add to your play list by clicking here</Link>
+                <Link to ={ '/music/'+this.props.match.params.id}><div className = "event-footer">Create or add to your play list by clicking here</div></Link>
                 <Playlist id ={this.props.match.params.id}/>
+                <div className = "event-edit"> 
+                <Link to = { '/editw/'+this.props.match.params.id}><div>Edit Event</div></Link>
+                <div onClick = {() => this.delete()}>Delete Event</div>
+                </div>
+
             </div>
         )
     }

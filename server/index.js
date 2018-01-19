@@ -23,10 +23,10 @@ app.put( '/api/wedding/:id', wController.update );
 app.delete( '/api/wedding/:id', wController.delete );
 
 //corporate endpoints
-app.post( '/api/corp', wController.create );
-app.get( '/api/corp/:id', wController.getEvent );
-app.put( '/api/corp/:id?desc=...', wController.update );
-app.delete( '/api/corp/:id', wController.delete );
+app.post( '/api/corp', corpController.create );
+app.get( '/api/corp/:id', corpController.getEvent );
+app.put( '/api/corp/:id', corpController.update );
+app.delete( '/api/corp/:id', corpController.delete );
 
 
 //music endpoints

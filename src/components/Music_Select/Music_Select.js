@@ -17,7 +17,7 @@ export default class Music_Select extends Component {
     addSong(value){
         let newArray = this.state.addedSongs;
         let index = newArray.indexOf(value)
-        if(index != -1){
+        if(index !==-1){
             newArray.splice(index, 1)
         } else {
         newArray.push(value)

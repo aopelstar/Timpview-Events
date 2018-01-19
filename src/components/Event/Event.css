@@ -1,0 +1,12 @@
+.event-edit {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin-top:25%;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.event-footer {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}

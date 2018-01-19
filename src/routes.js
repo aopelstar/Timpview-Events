@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Splash from './components/Splash/Splash';
 import Welcome from './components/Home/Home';
@@ -7,9 +7,11 @@ import Price from './components/Price/Price';
 import Events from './components/Event/Event';
 import Cevents from './components/Event/Cevent';
 import Music from './components/Music_Select/Music_Select';
-import Login from './components/Login/Login'
-import Create_wed from './components/Create/Create_wed'
-import Create_party from './components/Create/Create_party'
+import Login from './components/Login/Login';
+import Create_wed from './components/Create/Create_wed';
+import Create_party from './components/Create/Create_party';
+import EditEvent from './components/Edit/EditEvent';
+import EditCevent from './components/Edit/EditCevent';
 
 
 export default (
@@ -24,6 +26,8 @@ export default (
         <Route path = '/login' component = { Login } />
         <Route path = '/createw' component = { Create_wed } />
         <Route path = '/createc' component = { Create_party } />
+        <Route path = '/editw/:id' component = { EditEvent } />
+        <Route path = '/editc/:id' component = { EditCevent } />
      </Switch>
 
 )

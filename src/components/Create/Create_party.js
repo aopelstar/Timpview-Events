@@ -35,9 +35,11 @@ export default class Create_wed extends Component {
             time_frame: this.state.time,
             venue: this.state.venue
         }
+        
 
         let promise = axios.post("api/corp", body)
         promise.then(({data})=> {
+            console.log(data);
             this.props.history.push('/cevent/' +data[0].id)})
     }
 

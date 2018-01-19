@@ -1,27 +1,24 @@
 import React from 'react';
 import './E_populate.css'
 
-function E_populate(props){
+function E_copulate(props){
     return(
         <div>
             <h1 className="about-h1">Congratulations!</h1>
             <div className = 'songs'>
-            <div>Congratulations, {props.groom} and {props.bride} for scheduling your event on {props.date}
-            .  We have your information now and you can be expecting a call from us at either {props.bPhone} or {props.gPhone} sometime in the near future.
+            <div>Congratulations, {props.name} from {props.company} for scheduling your event on {props.date}
+            .  We have your information now and you can be expecting a call from us at {props.phone} sometime in the near future.
             Please take a look below and confirm all of your information.
             </div>
             <div className="specifics">
             <div>
-                Groom: {props.groom}
+                Company: {props.company}
                 </div>
                 <div>
-                Bride: {props.bride}
+                Name: {props.name}
                 </div>
                 <div>
-                Groom Phone: {props.gPhone}
-                </div>
-                <div>
-                Bride Phone: {props.bPhone}
+                Phone: {props.phone}
                 </div>
                 <div>
                 Date: {props.date}
@@ -37,4 +34,4 @@ function E_populate(props){
         </div>
     )
 }
-export default E_populate;
+export default E_copulate;

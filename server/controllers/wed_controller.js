@@ -2,11 +2,14 @@ module.exports ={
     create: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
         const { groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue } = req.body;
-
+            
         dbInstance.wedding.create_wevent([groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue])
         .then( response => {
+            console.log(response);
             res.status(200).send(response) })
-        .catch( error => res.status(500).send(error) );
+        .catch( error => {
+            console.log(error)
+            res.status(500).send("failed to add")} );
         
     },
 
@@ -24,6 +27,11 @@ module.exports ={
     },
 
     delete: ( req, res, next ) => {
+        const dbInstance = req.app.get('db');
+
+        dbInstance.wedding.delete_wevent([ req.params.id ])
+        .then(response => res.status(200).send("Event Deleted, succa") )
+        .catch(error => res.status(500).send(error) );
 
     },
 
