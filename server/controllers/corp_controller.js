@@ -2,12 +2,10 @@ module.exports ={
     create: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
         const { company, contact_name, phone, dates, time_frame, venue } = req.body;
-        console.log(req.body);
 
         dbInstance.corporate.create_cevent([company, contact_name, phone, dates, time_frame, venue])
         .then( response => {
-            res.status(200).send(response); 
-            console.log(response);
+            res.status(200).send(response);
         }).catch( error => res.status(500).send(error) );
 
     },
@@ -22,6 +20,15 @@ module.exports ={
     },
 
     update: ( req, res, next ) => {
+        const dbInstance = req.app.get('db');
+        const { company, contact_name, phone, dates, time_frame, venue } = req.body;
+        console.log(req.body)
+
+        dbInstance.corporate.update_cevent( [req.params.id, company, contact_name, phone, dates, time_frame, venue] )
+        .then( response => {
+            res.status(200).send(response[0]);
+            console.log(response)})
+        .catch(error => res.status(500).send(error) );
 
     },
 

@@ -14,6 +14,15 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.music-h1 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: 'Great Vibes', cursive;
+}
+
 
 
 
@@ -27,6 +36,7 @@
 }
 
 .arrows {
+ margin-top: 10%;
 display: flex;
 justify-content: space-between;
 
@@ -36,29 +46,30 @@ justify-content: space-between;
 .arrow1 {
     height: 50px;
     transform: scaleX(-1);
-    margin: 20px;
     position: absolute;
     bottom: 75px;
     left: 25px;
+    margin: 7%;
     
     
 }
 
 .arrow2 {
     height: 50px;
-    margin: 20px;
     position: absolute;
     bottom: 75px;
     right: 25px;
+    margin: 7%;
 }
 
-.btn {
+.songs-btn {
 
     background-color: #230133;
     color: #fff;
     align-content: center;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
+    font-size: 1em;
     border-color: #fff;
     border-width: 1px;
     text-align: center;
@@ -69,4 +80,78 @@ justify-content: space-between;
     bottom: 105px;
 
     
+}
+
+@media(min-width:750px){
+    .songs {
+        font-size: 2em;
+        margin-top: 0;
+    }
+
+    .music-h1 {
+        margin-bottom: 1%;
+        font-size: 9em;
+    }
+
+    .songs-btn{
+        bottom: 80px;
+        height: 75px;
+        font-size: 2em;
+    }
+
+    .arrow1 {
+        height: 100px;
+        transform: scaleX(-1);
+        position: absolute;
+        bottom: 15px;
+        left: 25px;
+        
+        
+    }
+    
+    .arrow2 {
+        height: 100px;
+        position: absolute;
+        bottom: 15px;
+        right: 25px;
+    }
+}
+
+@media(min-width:1200px){
+    .music-h1{
+        position: absolute;
+        left: 35%;
+        top: 23%;
+        z-index: -2;
+        margin: 0;
+    }
+
+    .songs{
+        margin: 0;
+        width: 45%;
+        position: absolute;
+        top: 39%;
+        left: 27%;
+        font-size: 1.5em;
+    }
+
+    .arrows{
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        bottom: 10%;
+    }
+
+    .arrow1{
+        left: 10%;
+    }
+
+    .arrow2{
+        right: 10%;
+    }
+
+    .songs-btn{
+        left: 35%;
+        top: 5%;
+    }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import './Create.css';
 import axios from 'axios';
+import image from '../../images/DJ/spinny_light.jpg'
 
 
 export default class Create_wed extends Component {
@@ -46,17 +47,20 @@ export default class Create_wed extends Component {
     render(){
         return(
             <div>
+                 <img src = {image} alt="whatever" className="image-home"/>
                 <Header/>
-                <h1 className="about-h1">Create Your Party</h1>
-                <div className='create'>
-                <div className='subCreate'>Company Name:  <input className ="justify"  onChange = {event => this.handleChange("company", event.target.value)}/></div>
-                <div className='subCreate'>Contact Name:  <input className ="justify"  onChange = {event => this.handleChange("contact", event.target.value)}/></div>
-                <div className='subCreate'>Contact's Telephone:  <input className ="justify"  onChange = {event => this.handleChange("phone", event.target.value)}/></div>
-                <div className='subCreate'>Date:  <input className ="justify"  onChange = {event => this.handleChange("date", event.target.value)}/></div>
-                <div className='subCreate'>Time Frame:  <input className ="justify"  onChange = {event => this.handleChange("time", event.target.value)}/></div>
-                <div className='subCreate'>Venue:  <input className ="justify"  onChange = {event => this.handleChange("venue", event.target.value)}/></div>
+                <div className="create-container-c">
+                <h1 className="create-h1">Create Your Party</h1>
+                <div className='create-c'>
+                <div className='subCreate'>Company Name:  <input onChange = {event => this.handleChange("company", event.target.value)} className ="justify-c" /></div>
+                <div className='subCreate'>Contact Name:  <input className ="justify-c"  onChange = {event => this.handleChange("contact", event.target.value)}/></div>
+                <div className='subCreate'>Contact Telephone:  <input className ="justify-c"  onChange = {event => this.handleChange("phone", event.target.value)}/></div>
+                <div className='subCreate'>Date:  <input className ="justify-c"  onChange = {event => this.handleChange("date", event.target.value)}/></div>
+                <div className='subCreate'>Time Frame:  <input className ="justify-c"  onChange = {event => this.handleChange("time", event.target.value)}/></div>
+                <div className='subCreate'>Venue:  <input className ="justify-c"  onChange = {event => this.handleChange("venue", event.target.value)}/></div>
                 
                 
+                </div>
                 </div>
                 <div className = "submit"><button className ="button" onClick ={ event=> this.submit(event.target.value)}>Submit</button>
                     </div>

@@ -23,6 +23,18 @@ module.exports ={
     },
 
     update: ( req, res, next ) => {
+        const dbInstance = req.app.get('db');
+        const { groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue } = req.body
+        console.log(req.body);
+
+        dbInstance.wedding.update_wevent( [req.params.id, groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue ])
+        .then( response => {
+            console.log(response);
+            res.status(200).send(response)
+        }).catch( error => {
+            console.log(error)
+            res.status(500).send("failed to update");
+        })
 
     },
 
@@ -66,7 +78,6 @@ module.exports ={
 
         dbInstance.playlist.find_playlist( [req.params.id] )
         .then( (result) => {
-            console.log(result);
             res.status(200).send(result) })
         .catch( error => {
             res.status(500).send("whatevs")

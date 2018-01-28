@@ -4,7 +4,8 @@ import Playlist from '../Playlist/Playlist'
 import axios from 'axios';
 import E_populate from './E_populate/E_populate'
 import { Link } from 'react-router-dom';
-import './Event.css'
+import './Event.css';
+import image from '../../images/DJ/booth.jpg';
 
 
 
@@ -50,6 +51,7 @@ export default class Event extends Component {
     render() {
         return(
             <div>
+                <img src = {image} alt="whatever" className="image-home"/>
                 <Header/>
                 <E_populate groom ={this.state.groomName} bride ={this.state.brideName}
                  gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}

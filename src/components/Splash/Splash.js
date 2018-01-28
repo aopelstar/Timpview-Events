@@ -5,12 +5,13 @@ import {Link} from 'react-router-dom';
 
 function Splash(){
     return(
-        <div className="splash">
-        
+        <div className="splash"><div><img src = {image} alt = "whatevs" className="image"/></div>
+        <div className='header-container'>
             <div className = "header">
-            Timpview Events
+             Timpview Events 
             </div>
-            <div><img src = {image} alt = "whatevs" className="image"/></div>
+            </div>
+            
 
 
             <Link to ='/Home'> <div className = "login"> <button className ="button">Enter</button></div></Link>

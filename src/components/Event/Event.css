@@ -1,12 +1,47 @@
 .event-edit {
+    position: relative;
     color: #fff;
     display: flex;
     justify-content: space-around;
-    margin-top:25%;
+    margin-top:140%;
     font-family: 'PT Sans', sans-serif;
 }
 
 .event-footer {
-    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 7%;
     font-family: 'PT Sans', sans-serif;
+}
+
+@media(min-width:750px){
+    .event-edit{
+        margin-top:98%;
+        font-size: 2.5em;
+    }
+
+    .event-footer{
+        font-size: 2em;
+        left: 8%;
+        top: 82%;
+    }
+}
+
+@media(min-width:1200px){
+    .event-edit{
+        position: absolute;
+        width: 100%;
+        display: flex;
+
+        margin: 0;
+        bottom: 2%;
+    }
+
+    .event-footer{
+        font-size: 2em;
+        left: 28%;
+        top: 86%;
+    }
+
+    
 }

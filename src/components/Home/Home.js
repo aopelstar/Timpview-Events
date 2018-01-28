@@ -8,23 +8,31 @@ export default class Home extends Component {
     constructor(){
         super();
         this.state = {
-            slide: false
+            slide: false,
+            page: false
         }
     }
+    // componentDidMount(){ this isn't quite working yet
+    //     this.setState({
+    //         page: true
+    //     })
+    // }
 
    
 
     render(){
         return(
-           <div>    
+        //    <div className ={this.state.page?"home-app":"home-app-hidden"}>  this isn't working yet
+        <div>  
+            <div><img src = {image} alt="whatever" className="image-home"/></div>
                <Header/>
 
 
-                <div><img src = {image} alt="whatever" className="image"/></div>
-                <div className= "line">
+                
+                
                 <h2 className = "byline">Your party, </h2>
-                <h3 className = 'byline2'>perfectly entertained</h3>
-                </div>
+                <div className="force"><h3 className = 'byline2'>perfectly entertained</h3></div>
+                
                 </div>
 
         )

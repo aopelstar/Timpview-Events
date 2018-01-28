@@ -1,6 +1,147 @@
+.copulate-container{
+    position: absolute;
+    z-index: -2;
+    
+}
+
 .specifics {
     margin-top: 15px;
-    font-size: 1.2
-    em;
+    font-size: 1.2em;
     font-weight: bold;
+}
+
+.copulate-h1 {
+    position: relative;
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    margin-top: 7%;
+    font-family: 'Great Vibes', cursive;
+}
+
+.populate-h1 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 10%;
+    font-family: 'Great Vibes', cursive;
+}
+
+.copulate{
+    position: relative;
+    background-color: #011533;
+    width: 85%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    margin: 7%;
+    border-radius: 10%;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px;
+    font-size: 1.1em;
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 10%;
+}
+
+
+.populate{
+    background-color: #011533;
+    width: 85%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    margin: 7%;
+    border-radius: 10%;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px;
+    font-size: 1.1em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.what{
+    font-size: 1em;
+    margin-left: 15px;
+    transition: 5s;
+}
+
+@media(min-width: 750px){
+
+    .copulate{
+        width: 65%;
+        margin-left: 17.5%;
+        font-size: 2em;
+        margin-top: 3%;
+    }
+
+    .copulate-h1 {
+        font-size: 8.5em;
+        margin-left: 1%;
+        margin-top: 3%;
+    }
+    
+    .populate{
+        width: 65%;
+        margin-left: 17.5%;
+        font-size: 1.75em;
+        margin-top: 2%;
+    }
+
+    .populate-h1 {
+        margin-top: 2%;
+        font-size: 8.5em;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+
+
+   
+}
+
+@media(min-width: 1200px){
+
+    .copulate-container{
+        top: 20%;
+    }
+    .copulate-h1{
+        margin-top: 2%;
+    }
+
+    .populate-h1{
+        margin-top: 1%;
+        margin-bottom: 20px;
+    }
+
+    .copulate{
+        margin-top: 5%;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .populate{
+        margin-top: 0;;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .row{
+       justify-content: center;
+    }
+
+    .what{
+        margin-left: 40px;
+    }
 }

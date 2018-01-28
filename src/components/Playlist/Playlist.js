@@ -32,9 +32,9 @@ export default class Playlist extends Component {
         })
         
         return(<div className ={this.state.songInfo.length === 0 ? "playlist-hidden":"playlist-reveal"}>
-                <h1 className="about-h1">Your Playlist</h1>
+                <h1 className="playlist-h1">Your Playlist</h1>
             <div className = "playlist-songs">
-            <div className = "populate"> {song}
+            <div> {song}
             </div>
                 </div>
                 </div>

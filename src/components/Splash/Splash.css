@@ -28,17 +28,19 @@ body {
 
 }
 
-.image{
+.image {
     width: 100%;
     margin-top: 10%;
+    height: 450px;
+    position: absolute;
+    top: 50px;
+    z-index: -2;
 }
 
 .login {
-    
-    position: relative;
     display: flex;
     justify-content: space-around;
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 
@@ -52,7 +54,118 @@ body {
     border-color: #fff;
     border-width: 1px;
     text-align: center;
-    width:50%;
-    height: 35px;
+    width:45%;
+    height: 40px;
+    font-size: 1.5em;
+    margin-top: 120%;
+    position: absolute;
+    bottom: 8%;
     
+}
+
+@media( min-width:750px){
+    .header {
+        background-color: #230133;
+        width: 100%;
+        height: 100px;
+        margin-top: 45px;
+        color: #fff;
+        border-top: #fff;
+        border-bottom: #fff;
+        border-width: 3px;
+        border-style: solid;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        font-size: 3em;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: bold;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .login {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0%;
+    }
+
+    .image{
+        width: 100%;
+        margin-top: 0;
+        height: 100%;
+    }
+    
+    .button {
+        background-color: #230133;
+        color: #fff;
+        align-content: center;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        border-color: #fff;
+        border-width: 1px;
+        text-align: center;
+        width:50%;
+        height: 75px;
+
+        
+    }
+
+}
+
+@media(min-width:1200px){
+    .header-container {
+        display: flex;
+        justify-content: center;
+    }
+    .header {
+        background-color: #230133;
+        width: 50%;
+        height: 75px;
+        margin-top: 45px;
+        color: #fff;
+        border-top: #fff;
+        border-bottom: #fff;
+        border-width: 2px;
+        border-style: solid;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        font-size: 3em;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: bold;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .image{
+        width: 100%;
+        margin-top: 0;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+    }
+    
+    .login {
+        
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40%;
+    }
+    
+    
+    .button {
+    
+        background-color: #230133;
+        color: #fff;
+        align-content: center;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        border-color: #fff;
+        border-width: 1px;
+        text-align: center;
+        width:25%;
+        height: 50px;
+        
+    }
+
 }

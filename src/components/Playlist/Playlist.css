@@ -15,10 +15,52 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.playlist-h1 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: 'Great Vibes', cursive;
+}
+
 .playlist-hidden{
     display: none;
 }
 
 .playlist-reveal{
     display: initial;
+    position: absolute;
+    top: 90%;
+    left: 6%;
+}
+
+@media(min-width: 750px){
+    .playlist-h1{
+        font-size: 8.5em;
+
+    }
+
+    .playlist-songs {
+        width: 65%;
+        margin-left: 17.5%;
+        font-size: 1.75em;
+        margin-top: 1%;
+    }
+}
+
+@media(min-width: 1200px){
+    
+    .playlist-reveal{
+        top: 95%;
+        left: 25%;
+    }
+
+    .playlist-songs{
+        margin-top: 0;;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
 }

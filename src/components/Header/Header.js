@@ -7,18 +7,22 @@ export default class Header extends Component {
     constructor(){
         super();
         this.state = {
+            page: false,
             slide: false
         }
     }
 
     hamburger() {
         this.setState({
-            slide: !this.state.slide
+            slide: !this.state.slide,
+            page: !this.state.page
         })
     };
 
+
     render(){
         return(
+           
             <div>
             <div className = "head">
            <div className = 'ham-menu' onClick = {() => this.hamburger()}><img src = { hamburger } alt="whatevs" className = "hamburger"/></div>
@@ -29,11 +33,11 @@ export default class Header extends Component {
 
             <div className={ this.state.slide ? 'menu-slide menu':'menu'}>
             <ul>
-               <Link to ='/login'><li>Login</li></Link>
-               <Link to = '/home'> <li>Home</li></Link>
-               <Link to = '/about'> <li>About</li></Link>
-               <Link to ='/about'><li>Reviews</li></Link>
-               <Link to ='/price'><li>Prices</li></Link>
+               <Link to ='/login'><li className={ this.state.slide ? 'list-item':'list-item-hidden'}>Login</li></Link>
+               <Link to = '/home'> <li className={ this.state.slide ? 'list-item':'list-item-hidden'}>Home</li></Link>
+               <Link to = '/about'> <li className={ this.state.slide ? 'list-item':'list-item-hidden'}>About</li></Link>
+               <Link to ='/about'><li className={ this.state.slide ? 'list-item':'list-item-hidden'}>Reviews</li></Link>
+               <Link to ='/price'><li className={ this.state.slide ? 'list-item':'list-item-hidden'}>Prices</li></Link>
                
     
             </ul>
