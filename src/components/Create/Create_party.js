@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import './Create.css';
+// import './Create.css';
 import axios from 'axios';
 import image from '../../images/DJ/spinny_light.jpg'
 

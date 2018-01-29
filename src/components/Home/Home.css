@@ -1,4 +1,4 @@
-*{
+/* *{
     font-size: 0px;
 }
 .home-app-hidden{
@@ -10,7 +10,7 @@
 .home-app{
     position:absolute;
     transition: .5s
-}
+} */
 /*everything below here effects the header*/
 .head {
     background-color: #230133;

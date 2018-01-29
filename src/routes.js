@@ -1,5 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+import {spring, AnimatedSwitch } from 'react-router-transition';
 import Splash from './components/Splash/Splash';
 import Welcome from './components/Home/Home';
 import About from './components/About/About';
@@ -14,8 +15,15 @@ import EditEvent from './components/Edit/EditEvent';
 import EditCevent from './components/Edit/EditCevent';
 
 
+    
 export default (
     <Switch>
+    {/* // <AnimatedSwitch */}
+    {/* // atEnter={{ opacity: 0 }}
+    // atLeave={{ opacity: 0 }}
+    // atActive={{ opacity: 1 }}
+    // className="switch-wrapper"
+    //  >  */}
         <Route exact path = '/' component = { Splash } />
         <Route path = '/home' component = { Welcome } />
         <Route path = '/about' component = { About } />
@@ -28,6 +36,7 @@ export default (
         <Route path = '/createc' component = { Create_party } />
         <Route path = '/editw/:id' component = { EditEvent } />
         <Route path = '/editc/:id' component = { EditCevent } />
-     </Switch>
+     {/* </AnimatedSwitch> */}
+    //  </Switch>
 
 )

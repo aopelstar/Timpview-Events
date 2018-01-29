@@ -17,6 +17,7 @@ export default class Create_wed extends Component {
             time: "",
             venue: "",
         }
+
         this.handleChange=this.handleChange.bind(this);
     }
 
@@ -47,13 +48,13 @@ export default class Create_wed extends Component {
     render(){
         return(
             <div>
-                <img src = {image} alt="whatever" className="image-home"/>
-                <Header/>
+                <img src = {image} alt="whatever" className="image-home"/> 
+                 <Header/>
                 <div className = 'create-container'>
                 <h1 className="create-h1">Create Your Wedding</h1>
                 <div className='create'>
                 <div className='subCreate'>Groom's Name:  
-                <input className ="justify"  onChange = {event => this.handleChange("groomName", event.target.value)}/></div>
+                <input className ="justify"  value={this.state.groomName} onChange = {event => this.handleChange("groomName", event.target.value)}></input></div>
                 <div className='subCreate'>Bride's Name:  
                 <input className ="justify"  onChange = {event => this.handleChange("brideName", event.target.value)}/></div>
                 <div className='subCreate'>Groom's Telephone:  
@@ -72,6 +73,8 @@ export default class Create_wed extends Component {
                 
                 <div className = "submit"><button className ="button" onClick ={ event=> this.submit(event.target.value)}>Submit</button>
                     </div>
+                    
+
                     
                     
                 </div>
