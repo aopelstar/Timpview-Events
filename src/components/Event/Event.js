@@ -25,7 +25,7 @@ export default class Event extends Component {
     } 
 
     componentDidMount(){
-        let promise = axios.get('/api/wedding/'+this.props.match.params.id)
+        let promise = axios.get('/api/wedding')
         promise.then( ({data}) => {
             this.setState({
                 groomName: data.groom_name,
@@ -37,7 +37,8 @@ export default class Event extends Component {
                 venue: data.venue
 
 
-            })
+            });
+            
         })
 
     }
@@ -57,10 +58,10 @@ export default class Event extends Component {
                  gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}
                  time = {this.state.time} venue = {this.state.venue} />
 
-                <Link to ={ '/music/'+this.props.match.params.id}><div className = "event-footer">Create or add to your play list by clicking here</div></Link>
+                <Link to ={ '/music'}><div className = "event-footer">Create or add to your play list by clicking here</div></Link>
                 <Playlist id ={this.props.match.params.id}/>
                 <div className = "event-edit"> 
-                <Link to = { '/editw/'+this.props.match.params.id}><div>Edit Event</div></Link>
+               <Link to = {'/createw/'}> <div>Create Event</div></Link><Link to = { '/editw/'+this.props.match.params.id}><div>Edit Event</div></Link>
                 <div onClick = {() => this.delete()}>Delete Event</div>
                 </div>
 

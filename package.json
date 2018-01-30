@@ -10,6 +10,8 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "massive": "^4.6.2",
+    "passport": "^0.4.0",
+    "passport-auth0": "^0.6.1",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-addons-transition-group": "^15.6.2",

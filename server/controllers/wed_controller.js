@@ -1,9 +1,9 @@
 module.exports ={
     create: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
-        const { groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue } = req.body;
+        const { groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue, auth_id } = req.body;
             
-        dbInstance.wedding.create_wevent([groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue])
+        dbInstance.wedding.create_wevent([groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue, auth_id])
         .then( response => {
             console.log(response);
             res.status(200).send(response) })
@@ -16,7 +16,7 @@ module.exports ={
     getEvent: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
 
-        dbInstance.wedding.find_wevent( [req.params.id] )
+        dbInstance.wedding.find_wevent( [req.user.auth_id] )
         .then( response => res.status(200).send(response[0]) )
         .catch( error => res.status(500).send(error) );
 
@@ -26,8 +26,9 @@ module.exports ={
         const dbInstance = req.app.get('db');
         const { groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue } = req.body
         console.log(req.body);
+        console.log( "============+", req.user);
 
-        dbInstance.wedding.update_wevent( [req.params.id, groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue ])
+        dbInstance.wedding.update_wevent( [req.user.id, groom_name, bride_name, g_phone, b_phone, dates, time_frame, venue ])
         .then( response => {
             console.log(response);
             res.status(200).send(response)
@@ -41,8 +42,10 @@ module.exports ={
     delete: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
 
-        dbInstance.wedding.delete_wevent([ req.params.id ])
-        .then(response => res.status(200).send("Event Deleted, succa") )
+        dbInstance.wedding.delete_wevent([ req.user.id ])
+        .then(response => {
+            req.logout()
+            res.status(200).send("Event Deleted, succa") } )
         .catch(error => res.status(500).send(error) );
 
     },
@@ -63,7 +66,7 @@ module.exports ={
         const { songs } = req.body;
         let promiseArray = songs.map(element =>{
 
-            return dbInstance.playlist.create_playlist( [req.params.id, element])
+            return dbInstance.playlist.create_playlist( [req.user.id, element])
         })
         let promise = Promise.all( promiseArray )
         promise.then(res.send('you did it!'))
@@ -76,7 +79,7 @@ module.exports ={
     getPlaylist: (req, res, next ) => {
         const dbInstance = req.app.get('db');
 
-        dbInstance.playlist.find_playlist( [req.params.id] )
+        dbInstance.playlist.find_playlist( [req.user.id.toString()] )
         .then( (result) => {
             res.status(200).send(result) })
         .catch( error => {

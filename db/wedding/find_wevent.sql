@@ -1,2 +1,2 @@
 select * from wevents
-where id = $1
+where auth_id = $1

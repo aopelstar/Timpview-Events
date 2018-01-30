@@ -28,13 +28,13 @@ export default (
         <Route path = '/home' component = { Welcome } />
         <Route path = '/about' component = { About } />
         <Route path = '/price' component = { Price } />
-        <Route path = '/event/:id' component = { Events } />
+        <Route path = '/event' component = { Events } />
         <Route path = '/cevent/:id' component = { Cevents } />
-        <Route path = '/music/:id' component = { Music } />
+        <Route path = '/music' component = { Music } />
         <Route path = '/login' component = { Login } />
         <Route path = '/createw' component = { Create_wed } />
         <Route path = '/createc' component = { Create_party } />
-        <Route path = '/editw/:id' component = { EditEvent } />
+        <Route path = '/editw' component = { EditEvent } />
         <Route path = '/editc/:id' component = { EditCevent } />
      {/* </AnimatedSwitch> */}
     //  </Switch>

@@ -12,7 +12,7 @@ export default class Playlist extends Component {
     }
 
     componentDidMount(){
-        let promise = axios.get('/api/playlist/'+this.props.id)
+        let promise = axios.get('/api/playlist')
         promise.then( ({data}) => {
             this.setState({
                 songInfo: data

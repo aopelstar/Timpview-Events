@@ -16,6 +16,7 @@ export default class Create_wed extends Component {
             date: "",
             time: "",
             venue: "",
+            auth_id: ""
         }
 
         this.handleChange=this.handleChange.bind(this);
@@ -37,10 +38,11 @@ export default class Create_wed extends Component {
             b_phone: this.state.bridePhone,
             dates: this.state.date,
             time_frame: this.state.time,
-            venue: this.state.venue
+            venue: this.state.venue,
+            auth_id: this.state.auth_id
         }
 
-        let promise = axios.post("/api/wedding", body)
+        let promise = axios.put("/api/wedding", body)
         promise.then(({data})=> {
             this.props.history.push('/event/' +data[0].id)})
     }

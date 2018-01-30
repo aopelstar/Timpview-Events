@@ -59,14 +59,13 @@ export default class Music_Select extends Component {
 
     submit(){
         let body = {
-            songs: this.state.addedSongs,
-            eventID: this.props.match.params.id
+            songs: this.state.addedSongs
         }
         console.log(body)
 
-        let promise = axios.post("/api/playlist/"+this.props.match.params.id, body)
+        let promise = axios.post("/api/playlist", body)
         promise.then(({data}) => {
-            this.props.history.push('/event/'+this.props.match.params.id)
+            this.props.history.push('/event')
         })
 
     }

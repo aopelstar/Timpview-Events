@@ -29,7 +29,7 @@ export default class EditEvent extends Component {
     }
 
     componentDidMount(){
-        let promise = axios.get('/api/wedding/'+this.props.match.params.id)
+        let promise = axios.get('/api/wedding')
         promise.then( ({data}) => 
     this.setState({
         groom: data.groom_name,
@@ -66,8 +66,8 @@ export default class EditEvent extends Component {
             venue: this.state.venue
         }
 
-        let promise = axios.put('/api/wedding/'+this.props.match.params.id, body)
-        promise.then( () => this.props.history.push('/event/'+this.props.match.params.id) )
+        let promise = axios.put('/api/wedding', body)
+        promise.then( () => this.props.history.push('/event') )
     }
 
 
