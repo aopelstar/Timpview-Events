@@ -6,8 +6,8 @@ const initialState = {
     bride_name: "",
     g_phone: "",
     b_phone: "",
-    date: "",
-    time: "",
+    dates: "",
+    time_frame: "",
     venue: "",
     auth_id: ""}
     , user: {}
@@ -15,6 +15,7 @@ const initialState = {
 
 const UPDATE_EVENT_BODY = "UPDATE_EVENT_BODY";
 const GET_USER = "GET_USER";
+const UPDATE_USER = "UPDATE_USER";
 
 
 function reducer( state = initialState, action ) {
@@ -24,6 +25,9 @@ function reducer( state = initialState, action ) {
 
         case GET_USER+"_FULFILLED":
         return Object.assign( {}, state, {user: action.payload});
+
+        case UPDATE_USER:
+        return Object.assign({}, state, {user: action.payload});
 
 
         default: return state;
@@ -49,4 +53,7 @@ export function getUser(){
     }
 }
 
+export function updateUser(){
+
+}
 export default reducer;

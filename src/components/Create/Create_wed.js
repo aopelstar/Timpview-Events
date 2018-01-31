@@ -39,7 +39,7 @@ class Create_wed extends Component {
             bride_name: this.state.brideName,
             g_phone: this.state.groomPhone,
             b_phone: this.state.bridePhone,
-            date: this.state.date,
+            dates: this.state.date,
             time_frame: this.state.time,
             venue: this.state.venue,
             auth_id: this.state.auth_id
