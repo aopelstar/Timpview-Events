@@ -4,11 +4,16 @@
     
 }
 
+
 .specifics {
     margin-top: 15px;
     font-size: 1.2em;
     font-weight: bold;
+    transition: .5s;
+    opacity: 1;
 }
+
+
 
 .copulate-h1 {
     position: relative;
@@ -63,16 +68,29 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.row-hidden{
+    opacity: 0;
+    transition: .5s;
+}
+
 .row{
     display: flex;
     justify-content: space-between;
     margin-right: 20px;
+    opacity: 1;
+    transition: .5s;
 }
 
 .what{
     font-size: 1em;
     margin-left: 15px;
-    transition: 5s;
+    opacity: 1;
+    transition: 1s;
+}
+
+.what-hidden{
+    opacity: 0;
+    transition: 1s
 }
 
 @media(min-width: 750px){

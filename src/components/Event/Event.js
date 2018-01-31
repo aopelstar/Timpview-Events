@@ -21,7 +21,8 @@ class Event extends Component {
             b_phone: "",
             date: "",
             time: "",
-            venue: ""
+            venue: "",
+            textTrue: false
 
         }
     } 
@@ -50,7 +51,15 @@ class Event extends Component {
 
 
             });
-            this.props.updateEvent(body)
+            this.props.updateEvent(body);
+
+            setTimeout(() => {
+                this.setState({
+                    textTrue: !this.state.textTrue
+                })
+            }, 1000);
+
+            
             
         })
 
@@ -69,7 +78,7 @@ class Event extends Component {
                 <Header/>
                 <E_populate groom ={this.state.groomName} bride ={this.state.brideName}
                  gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}
-                 time = {this.state.time} venue = {this.state.venue} />
+                 time = {this.state.time} venue = {this.state.venue} textTrue ={this.state.textTrue}/>
 
                 <Link to ={ '/music'}><div className = "event-footer">Create or add to your play list by clicking here</div></Link>
                 <Playlist id ={this.props.match.params.id}/>
