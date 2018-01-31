@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import './Create.css';
 import axios from 'axios';
-import image from '../../images/DJ/spinny_light.jpg'
+import image from '../../images/DJ/spinny_light.jpg';
+import { connect } from 'react-redux';
+import { updateEvent, getUser } from '../../ducks/reducer'
 
 
-export default class Create_wed extends Component {
+
+class Create_wed extends Component {
     constructor(){
         super();
         this.state = {
@@ -16,8 +19,8 @@ export default class Create_wed extends Component {
             date: "",
             time: "",
             venue: "",
-            auth_id: ""
-        }
+            auth_id: ""}
+        
 
         this.handleChange=this.handleChange.bind(this);
     }
@@ -36,18 +39,23 @@ export default class Create_wed extends Component {
             bride_name: this.state.brideName,
             g_phone: this.state.groomPhone,
             b_phone: this.state.bridePhone,
-            dates: this.state.date,
+            date: this.state.date,
             time_frame: this.state.time,
             venue: this.state.venue,
             auth_id: this.state.auth_id
         }
+        this.props.updateEvent(body)
 
         let promise = axios.put("/api/wedding", body)
         promise.then(({data})=> {
+            console.log(data);
             this.props.history.push('/event/' +data[0].id)})
+
+        
     }
 
     render(){
+        this.props.getUser()
         return(
             <div>
                 <img src = {image} alt="whatever" className="image-home"/> 
@@ -83,3 +91,20 @@ export default class Create_wed extends Component {
         )
     }
 }
+
+function mapStateToProps( state ) {
+
+    return{
+        groomName: state.groomName,
+        brideName: state.brideName,
+        groomPhone: state.groomPhone,
+        bridePhone: state.bridePhone,
+        date: state.date,
+        time: state.time,
+        venue: state.venue,
+        auth_id: state.auth_id
+
+    }
+}
+
+export default connect( mapStateToProps, { updateEvent, getUser } ) (Create_wed); 

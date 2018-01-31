@@ -82,7 +82,7 @@ app.get('/auth/me', (req, res) => {
 
 app.get('/auth/logout', function( req, res ) {
     req.logOut();
-    res.redirect('http://localhost:3031/')
+    res.redirect('http://localhost:3031/#/home')
 })
 
 

@@ -6,10 +6,12 @@ import E_populate from './E_populate/E_populate'
 import { Link } from 'react-router-dom';
 import './Event.css';
 import image from '../../images/DJ/booth.jpg';
+import { connect } from 'react-redux';
+import { updateEvent } from '../../ducks/reducer'
 
 
 
-export default class Event extends Component {
+class Event extends Component {
     constructor() {
         super();
         this.state = {
@@ -27,6 +29,16 @@ export default class Event extends Component {
     componentDidMount(){
         let promise = axios.get('/api/wedding')
         promise.then( ({data}) => {
+            let body = {
+                groom_name: this.state.groomName,
+                bride_name: this.state.brideName,
+                g_phone: this.state.groomPhone,
+                b_phone: this.state.bridePhone,
+                dates: this.state.date,
+                time_frame: this.state.time,
+                venue: this.state.venue,
+                auth_id: this.state.auth_id
+            };
             this.setState({
                 groomName: data.groom_name,
                 brideName: data.bride_name,
@@ -38,6 +50,7 @@ export default class Event extends Component {
 
 
             });
+            this.props.updateEvent(body)
             
         })
 
@@ -69,3 +82,19 @@ export default class Event extends Component {
         )
     }
 }
+
+function mapStateToProps(state){
+    return{
+        groomName: state.groomName,
+        brideName: state.brideName,
+        groomPhone: state.groomPhone,
+        bridePhone: state.bridePhone,
+        date: state.date,
+        time: state.time,
+        venue: state.venue,
+        auth_id: state.auth_id
+
+    }
+}
+
+export default connect(mapStateToProps, { updateEvent } ) (Event)

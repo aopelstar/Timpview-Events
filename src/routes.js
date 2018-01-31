@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {HashRouter,Switch, Route} from 'react-router-dom';
 import {spring, AnimatedSwitch } from 'react-router-transition';
 import Splash from './components/Splash/Splash';
 import Welcome from './components/Home/Home';
@@ -17,7 +17,8 @@ import EditCevent from './components/Edit/EditCevent';
 
     
 export default (
-    <Switch>
+    <HashRouter>
+        <Switch>
     {/* // <AnimatedSwitch */}
     {/* // atEnter={{ opacity: 0 }}
     // atLeave={{ opacity: 0 }}
@@ -37,6 +38,7 @@ export default (
         <Route path = '/editw' component = { EditEvent } />
         <Route path = '/editc/:id' component = { EditCevent } />
      {/* </AnimatedSwitch> */}
-    //  </Switch>
+        </Switch>
+        </HashRouter>
 
 )
