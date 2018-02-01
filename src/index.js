@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store'
 import App from './App';
 import { HashRouter } from 'react-router-dom';
-import registerServiceWorker from './registerServiceWorker';
+
 
 ReactDOM.render(
 <HashRouter>
@@ -14,4 +14,4 @@ ReactDOM.render(
     </Provider>
 </HashRouter>
 , document.getElementById('root'));
-registerServiceWorker();
+

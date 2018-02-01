@@ -109,9 +109,9 @@
     }
     
     .populate{
-        width: 65%;
-        margin-left: 17.5%;
-        font-size: 1.75em;
+        width: 75%;
+        margin-left: 13.5%;
+        font-size: 1.85em;
         margin-top: 2%;
     }
 
@@ -157,7 +157,9 @@
     }
 
     .row{
-       justify-content: center;
+       justify-content: space-between;
+       margin-left: 10%;
+       margin-right: 10%;
     }
 
     .what{

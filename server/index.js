@@ -11,7 +11,12 @@ require('dotenv').config();
 const checkForSession = require('./middleware/checkForSession');
 
 const app = express();
+
+app.use( express.static( `${__dirname}/../build` ) );
 app.use( bodyParser.json());
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html') );
+})
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -68,8 +73,8 @@ passport.deserializeUser((id, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3031/#/event/',
-    failureRedirect: 'http://www.oprah.com'
+    successRedirect: '/#/event/',
+    failureRedirect: '/#/home'
 }));
 
 app.get('/auth/me', (req, res) => {
@@ -82,7 +87,7 @@ app.get('/auth/me', (req, res) => {
 
 app.get('/auth/logout', function( req, res ) {
     req.logOut();
-    res.redirect('http://localhost:3031/#/home')
+    res.redirect('/#/home')
 })
 
 
