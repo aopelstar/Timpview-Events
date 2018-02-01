@@ -15,9 +15,7 @@ const app = express();
 
 app.use( express.static( `${__dirname}/../build` ) );
 app.use( bodyParser.json());
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build/index.html') );
-})
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -109,6 +107,10 @@ app.delete( '/api/corp/:id', corpController.delete );
 app.get('/api/music', wController.getMusic )
 app.post('/api/playlist', wController.createPlaylist) 
 app.get('/api/playlist', wController.getPlaylist)
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html') );
+})
 
 
 
