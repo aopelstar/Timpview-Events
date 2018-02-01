@@ -6,6 +6,7 @@ const wController = require('./controllers/wed_controller');
 const corpController = require('./controllers/corp_controller');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
+const path = require('path');
 require('dotenv').config();
 
 const checkForSession = require('./middleware/checkForSession');
