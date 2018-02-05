@@ -6,6 +6,10 @@ import image from '../../images/DJ/spinny_light.jpg';
 import { connect } from 'react-redux';
 import { updateEvent, getUser } from '../../ducks/reducer'
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
 
 
 class Create_wed extends Component {
@@ -48,7 +52,6 @@ class Create_wed extends Component {
 
         let promise = axios.put("/api/wedding", body)
         promise.then(({data})=> {
-            console.log(data);
             this.props.history.push('/event/' +data[0].id)})
 
         
@@ -57,31 +60,37 @@ class Create_wed extends Component {
     render(){
         this.props.getUser()
         return(
-            <div>
-                <img src = {image} alt="whatever" className="image-home"/> 
+            <div className ="create-event" style={sectionStyle}> 
                  <Header/>
                 <div className = 'create-container'>
                 <h1 className="create-h1">Create Your Wedding</h1>
                 <div className='create'>
-                <div className='subCreate'>Groom's Name:  
+                <div className = "create-flex">
+                <div className='subCreate'>Groom's Name:  </div>
                 <input className ="justify"  value={this.state.groomName} onChange = {event => this.handleChange("groomName", event.target.value)}></input></div>
-                <div className='subCreate'>Bride's Name:  
+                <div className="create-flex">
+                <div className='subCreate'>Bride's Name:  </div>
                 <input className ="justify"  onChange = {event => this.handleChange("brideName", event.target.value)}/></div>
-                <div className='subCreate'>Groom's Telephone:  
+                <div className="create-flex">
+                <div className='subCreate'>Groom's Telephone:  </div>
                 <input className ="justify"  onChange = {event => this.handleChange("groomPhone", event.target.value)}/></div>
-                <div className='subCreate'>Bride's Telephone:  
+                <div className="create-flex">
+                <div className='subCreate'>Bride's Telephone: </div> 
                 <input className ="justify"  onChange = {event => this.handleChange("bridePhone", event.target.value)}/></div>
-                <div className='subCreate'>Date:  
+                <div className="create-flex">
+                <div className='subCreate'>Date:  </div>
                 <input className ="justify"  onChange = {event => this.handleChange("date", event.target.value)}/></div>
-                <div className='subCreate'>Time Frame:  
+                <div className="create-flex">
+                <div className='subCreate'>Time Frame:  </div>
                 <input className ="justify"  onChange = {event => this.handleChange("time", event.target.value)}/></div>
-                <div className='subCreate'>Venue:  
+                <div className="create-flex">
+                <div className='subCreate'>Venue:  </div>
                 <input className ="justify"  onChange = {event => this.handleChange("venue", event.target.value)}/></div>
                 
                 </div>
                 </div>
                 
-                <div className = "submit"><button className ="button" onClick ={ event=> this.submit(event.target.value)}>Submit</button>
+                <div className = "create-submit"><button className ="button" onClick ={ event=> this.submit(event.target.value)}>Submit</button>
                     </div>
                     
 

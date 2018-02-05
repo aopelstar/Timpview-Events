@@ -1,7 +1,16 @@
+.music{
+    margin: 0;
+    padding-top: 4%;
+    height: 667px;
+    background-size: cover;
+    background-position: 45% 
+
+}
+
 .songs {
     background-color: #011533;
     width: 85%;
-    height: auto;
+    height: 275px;
     color: #fff;
     text-align: center;
     margin: 7%;
@@ -46,9 +55,6 @@ justify-content: space-between;
 .arrow1 {
     height: 50px;
     transform: scaleX(-1);
-    position: absolute;
-    bottom: 75px;
-    left: 25px;
     margin: 7%;
     
     
@@ -56,9 +62,6 @@ justify-content: space-between;
 
 .arrow2 {
     height: 50px;
-    position: absolute;
-    bottom: 75px;
-    right: 25px;
     margin: 7%;
 }
 
@@ -66,7 +69,6 @@ justify-content: space-between;
 
     background-color: #230133;
     color: #fff;
-    align-content: center;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
     font-size: 1em;
@@ -75,17 +77,31 @@ justify-content: space-between;
     text-align: center;
     width:30%;
     height: 35px;
-    position: absolute;
-    left: 35%;
-    bottom: 105px;
+    margin-top: 4%;
+    
 
     
 }
 
 @media(min-width:750px){
+
+    .music{
+        margin: 0;
+        width: 100%;
+        height: 1024px;
+        background-size: cover;
+        background-position: 40%;
+        padding-top: 2%;
+    }
+
+
     .songs {
         font-size: 2em;
         margin-top: 0;
+        height: 450px;
+        margin-bottom: 1%;
+        width: 75%;
+        margin-left: 12.5%;
     }
 
     .music-h1 {
@@ -94,64 +110,84 @@ justify-content: space-between;
     }
 
     .songs-btn{
-        bottom: 80px;
         height: 75px;
         font-size: 2em;
+    }
+
+    .arrows{
+        margin-top: 0;
     }
 
     .arrow1 {
         height: 100px;
         transform: scaleX(-1);
-        position: absolute;
-        bottom: 15px;
-        left: 25px;
+        
         
         
     }
     
     .arrow2 {
         height: 100px;
-        position: absolute;
-        bottom: 15px;
-        right: 25px;
     }
 }
 
 @media(min-width:1200px){
+
+    .music{
+         height: 800px;
+    }
+
+
     .music-h1{
-        position: absolute;
-        left: 35%;
-        top: 23%;
-        z-index: -2;
-        margin: 0;
+        margin-top: 8%;
     }
 
     .songs{
         margin: 0;
-        width: 45%;
-        position: absolute;
-        top: 39%;
-        left: 27%;
+        width: 30%;
+        height: 375px;
+        margin-left: 35%;
+        
         font-size: 1.5em;
     }
 
     .arrows{
-        position: absolute;
         margin: 0;
         width: 100%;
-        bottom: 10%;
+        justify-content: center;
+    }
+
+    .background-weird{
+        background: transparent;
+        border: 0;
+        margin-left: 4%;
+        margin-right: 5%;
     }
 
     .arrow1{
-        left: 10%;
+        margin-right: 50%;
     }
 
     .arrow2{
-        right: 10%;
+        background:transparent;
+        border:0;
     }
 
     .songs-btn{
-        left: 35%;
-        top: 5%;
+        margin-top: 1%;
+        background-color: #230133;
+        padding-top: 0;
+        color: #fff;
+        align-content: center;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        border-color: #fff;
+        border-width: 1px;
+        text-align: center;
+        width:15%;
+        height: auto;
+        font-size: 3em;
+        padding-bottom: 0;
     }
+    
 }

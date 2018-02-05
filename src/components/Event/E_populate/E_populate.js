@@ -25,11 +25,9 @@ function E_populate(props){
                 Bride Phone: <div className={props.textTrue? "what":"what what-hidden"}>{props.bPhone}</div>
                 </div>}
                 {!!props.date && <div className="row">
-                Date: <div className={props.textTrue? "what":"what what-hidden"}>{props.date}
-</div>                </div>}
+                Date: <div className={props.textTrue? "what":"what what-hidden"}>{props.date}</div>                </div>}
                 {!!props.time && <div className="row">
-                Time: <div className={props.textTrue? "what":"what what-hidden"}>{props.time}
-</div>                </div>}
+                Time: <div className={props.textTrue? "what":"what what-hidden"}>{props.time}</div>                </div>}
                 {!!props.venue && <div className="row">
                 Venue: <div className={props.textTrue? "what":"what what-hidden"}>{props.venue}</div>
                 </div>}

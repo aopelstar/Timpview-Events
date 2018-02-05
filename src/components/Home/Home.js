@@ -4,6 +4,11 @@ import './Home.css';
 import image from '../../images/IMG_3578.jpg';
 import Header from '../Header/Header';
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
+
 export default class Home extends Component {
     constructor(){
         super();
@@ -23,15 +28,14 @@ export default class Home extends Component {
     render(){
         return(
         //    <div className ={this.state.page?"home-app":"home-app-hidden"}>  this isn't working yet
-        <div>  
-            <div><img src = {image} alt="whatever" className="image-home"/></div>
+        <div className ="home" style={sectionStyle}>  
                <Header/>
 
 
                 
                 
-                <h2 className = "byline">Your party, </h2>
-                <div className="force"><h3 className = 'byline2'>perfectly entertained</h3></div>
+                <div className="force"><h2 className = "byline">Your party, </h2>
+                <div><h3 className = 'byline2'>perfectly entertained</h3></div></div>
                 
                 </div>
 

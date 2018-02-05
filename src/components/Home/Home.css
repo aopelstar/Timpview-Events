@@ -1,111 +1,28 @@
-/* *{
-    font-size: 0px;
-}
+/*this is for page transitions only*/
 .home-app-hidden{
     position:absolute;
     left: 200%;
     transition: .5s;
+    z-index: -5;
 }
 
 .home-app{
     position:absolute;
-    transition: .5s
-} */
-/*everything below here effects the header*/
-.head {
-    background-color: #230133;
-    width: 100%;
-    height: 35px;
-    margin-top: 25px;
-    color: #fff;
-    border-color: #230133;
-    border-top: #fff;
-    border-bottom: #fff;
-    border-width: 1px;
-    border-style: solid;
-    border-left-width: 0px;
-    font-size: 1.5em;
-    text-align: center;
-    padding-top: 5px;
-    font-weight: bold;
-    font-family: 'PT Sans', sans-serif;
-    display: flex;
-    justify-content: space-between;
+    transition: .5s;
+    z-index: -5;
 }
-
-a{
-    color: #fff;
-    text-decoration: none;
-}
-
-a:active {
-    color: #011533
-}
-
-.ham-menu{
-    margin: 0;
-    padding: 0;
-    width: 5%;
-}
-
-.hamburger {
-    margin-left: 10px;
-    margin-top: 1px;
-    height: 19px;
-}
-
-.enter {
-    padding: 0;
-    margin: 0;
-    margin-right: 5px;
-}
-
-.menu {
-    color:#fff;
-    width: 30%;
-    padding-left: 6%;
-    position: absolute;
-    padding-top: 15px;
-    border-bottom-right-radius: 10%;
-    left: -30%;
-    transition: 1s;
-    font-family: 'PT Sans', sans-serif;
-    
-
-}
-
-ul {
-    display: block;
-}
-
-.menu ul li {
-    margin-bottom: 30px;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: 'PT Sans', sans-serif;
-}
-
-
-.menu-slide {
-    left: 0;
-    transition: 1s;
-    background-color:  #230133;
-}
-
-
-
-
 /*everything below effects the home page*/
 
 
-
+.force{
+    position: relative;
+    margin-top: 125%;
+}
 .byline {
     color: #fff;
      font-family: 'Great Vibes', cursive;
     margin-left: 5%;
     font-size: 3.2em;
-    margin-bottom: 10px;
-    margin-top:120%;
 }
 
 .byline2 {
@@ -115,13 +32,14 @@ ul {
     font-size: 3em;
 }
 
-.image-home {
-    width: 100%;
-    margin-top: 10%;
-    height: 450px;
-    position: fixed;
-    top: 50px;
-    z-index: -2;
+
+.home{
+    margin: 0;
+    padding-top: 4%;
+    height: 667px;
+    background-size: cover;
+    background-position: 45% 
+
 }
 
 
@@ -129,50 +47,11 @@ ul {
 
 @media(min-width: 750px){
 
-    .head {
-        background-color: #230133;
-        display: flex;
-        align-content: center;
-        width: 100%;
-        height: 100px;
-        margin-top: 45px;
-        color: #fff;
-        border-top: #fff;
-        border-bottom: #fff;
-        border-width: 3px;
-        border-style: solid;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        font-size: 3em;
-        text-align: center;
-        padding-top: 20px;
-        font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
-        
+    .force{
+        margin-top: 75%;
     }
 
-    .menu{
-        width:20%;
-        padding-left: 20px;
-    }
-
-    .menu ul li {
-        margin-bottom: 50px;
-        font-size: 2em;
-        font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
-    }
-
-
-    .hamburger {
-        height: 35px;
-    }
-
-    
-    
-    .byline {
-        position: absolute;
-        bottom: 10%;
+   .byline {
         margin-left: 10%;
         font-size: 7em;
         margin-bottom: 10px;
@@ -183,58 +62,31 @@ ul {
     .byline2 {
         color: #fff;
         font-family: 'Great Vibes', cursive;
-        position: absolute;
         margin-left: 25%;
         font-size: 6em;
-        bottom: 2%;
     }
 
-    .image-home {
-        width: 100%;
-        margin-top: 10%;
-        height: 88%;
-        position: fixed;
-        top: 50px;
-        z-index: -2;
-        margin-bottom: 0;
-    }
     
+    .home{
+        margin: 0;
+        width: 100%;
+        height: 1024px;
+        background-size: cover;
+        background-position: 40%;
+        padding-top: 2%;
+    
+    }
 
 }
 
 /*The entire home page at full desktop size*/
 
 @media(min-width: 1200px){
-
-    .head {
-        margin-left: 25%;
-        background-color: #230133;
-        width: 50%;
-        height: 75px;
-        margin-top: 45px;
-        color: #fff;
-        border-top: #fff;
-        border-bottom: #fff;
-        border-width: 2px;
-        border-style: solid;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        font-size: 3em;
-        text-align: center;
-        padding-top: 10px;
-        font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
-        
+    .force{
+        margin-top: 35%;
     }
 
-    
-
-
-    .hamburger {
-        height: 35px;
-    }
-
-    .line {
+   .line {
         color: #fff;
         font-family: 'Great Vibes', cursive;
         font-weight: bold;
@@ -252,70 +104,8 @@ ul {
         font-size: 6em;
     }
 
-    .menu {
-        width: 50%;
-        height: 75px;
-        color: #fff;
-        border-top: #fff;
-        border-bottom: #fff;
-        border-width: 2px;
-        border-style: solid;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-right-radius: 0%;
-        font-size: .75em;
-        text-align: center;
-        padding-top: 10px;
-        font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-top: 18px;
-        left: 25%;
-        top: 45px;
-        z-index: -1;
-        
-        }
-    
-    ul {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        
-    }
-    
-    
-    
-    .menu-slide {
-        left: 25%;
-        top: 118px;
-        transition: 1s;
-        background-color:  #230133;
-    }
-
-    .list-item-hidden {
-        display: none;
-        margin-bottom: 50px;
-        font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
-        transition: 1s;
-    }
-
-    .list-item {
-        display: initial;
-        transition: .5s;
-        
-
-    }
-
-    .image-home {
-        width: 100%;
-        margin-top: 10%;
-        height: 100%;
-        position: fixed;
-        top: -17%;
-        z-index: -2;
-        margin-bottom: 0;
+    .home{
+        height: 800px;
     }
 
 }

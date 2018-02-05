@@ -4,6 +4,10 @@ import './EditEvent.css';
 import Header from '../Header/Header'
 import image from '../../images/DJ/DJ2.jpg';
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
 
 export default class EditCevent extends Component {
     constructor() {
@@ -73,10 +77,8 @@ let body ={
 
     render() {
         return (
-            <div>
-                <div><img src = {image} alt="whatever" className="image-home"/></div>
+            <div className ="edit-event" style={sectionStyle}> 
                 <Header />
-                <h1 className='edit-h1'>Edit Event</h1>
                 <div className='songs'>
                     <div className='edit-rows' onClick={() => this.handleChange("compTrue")}>Company: <div className={this.state.compTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
                         <input className="edit-input" value={this.state.company} onChange={(e) => this.handleChange("company", e.target.value)} />

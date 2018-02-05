@@ -3,6 +3,10 @@ import Header from '../Header/Header';
 import './About.css';
 import image from '../../images/DJ/Firworks.jpg'
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
 export default class About extends Component{
     constructor(){
         super();
@@ -14,7 +18,7 @@ export default class About extends Component{
 
     render(){
         return(
-            <div><div><img src = {image} alt="whatever" className="image-home"/></div>
+            <div className="about-main" style={sectionStyle}>
                 <Header/>
                 <div className="about-container">
                 <h1 className = "about-h1">About</h1>

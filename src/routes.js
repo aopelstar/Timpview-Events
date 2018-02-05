@@ -13,18 +13,18 @@ import Create_wed from './components/Create/Create_wed';
 import Create_party from './components/Create/Create_party';
 import EditEvent from './components/Edit/EditEvent';
 import EditCevent from './components/Edit/EditCevent';
+import Header from './components/Header/Header'
 
 
     
 export default (
     <HashRouter>
-        <Switch>
-    {/* // <AnimatedSwitch */}
-    {/* // atEnter={{ opacity: 0 }}
-    // atLeave={{ opacity: 0 }}
-    // atActive={{ opacity: 1 }}
-    // className="switch-wrapper"
-    //  >  */}
+     <AnimatedSwitch 
+     atEnter={{ opacity: 0 }}
+    atLeave={{ opacity: 0 }}
+    atActive={{ opacity: 1 }}
+    className="switch-wrapper"
+    > 
         <Route exact path = '/' component = { Splash } />
         <Route path = '/home' component = { Welcome } />
         <Route path = '/about' component = { About } />
@@ -37,8 +37,8 @@ export default (
         <Route path = '/createc' component = { Create_party } />
         <Route path = '/editw' component = { EditEvent } />
         <Route path = '/editc/:id' component = { EditCevent } />
-     {/* </AnimatedSwitch> */}
-        </Switch>
+        <Route path = '' component = {Header }/>
+     </AnimatedSwitch> 
         </HashRouter>
 
 )

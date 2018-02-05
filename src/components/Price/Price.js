@@ -1,6 +1,11 @@
 import React, {Component } from 'react';
 import Header from '../Header/Header';
-import image from '../../images/DJ/DJ1.jpg'
+import image from '../../images/DJ/DJ1.jpg';
+import './Price.css';
+
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
 
 export default class Price extends Component {
     constructor() {
@@ -12,8 +17,7 @@ export default class Price extends Component {
 
     render(){
         return(
-            <div>
-                <img src = {image} alt="whatever" className="image-home"/>
+            <div ><div className ="price" style={sectionStyle}> 
                 <Header/>
                 <div className="about-container">
                 <h1 className = "about-h1">Prices</h1>
@@ -31,6 +35,7 @@ export default class Price extends Component {
                 ipsum non, blandit volutpat mi. Suspendisse potenti. Pellentesque 
                 fringilla congue eros. Class aptent taciti sociosqu ad litora 
                 torquent per conubia nostra, per inceptos himenaeos.</div>
+                </div>
                 </div>
                 </div>
         )

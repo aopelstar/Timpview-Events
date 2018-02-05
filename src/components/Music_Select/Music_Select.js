@@ -5,6 +5,10 @@ import axios from 'axios';
 import image from '../../images/arrow.png';
 import image2 from '../../images/DJ/spinny_light.jpg';
 
+var sectionStyle = {
+    backgroundImage: `url(${image2}`
+}
+
 export default class Music_Select extends Component {
     constructor(){
         super();
@@ -81,19 +85,19 @@ export default class Music_Select extends Component {
             )
         })
         return(
-            <div>
-                <div><img src = {image2} alt="whatever" className="image-home"/></div>
+            
+            <div className ="music" style={sectionStyle}> 
                 <Header/>
                 <h1 className = "music-h1">Music</h1>
                 <div className = 'songs'>
                 <div className = 'populate-songs'>{ songs }</div>
                 </div>
                 <div className = "arrows">
-                    <button onClick={ (event) => this.incrementDown(event.target.value)}>
+                    <button className="background-weird"onClick={ (event) => this.incrementDown(event.target.value)}>
                         <img src = { image } className="arrow1"/>
                     </button>
                     <button className ="songs-btn" onClick={() => this.submit()}>Submit</button>
-                    <button onClick={ (event) => this.incrementUp(event.target.value)}>
+                    <button className="background-weird" onClick={ (event) => this.incrementUp(event.target.value)}>
                         <img src = { image } className="arrow2"/>
                     </button>
                 </div>

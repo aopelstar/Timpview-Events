@@ -1,48 +1,52 @@
 
+.event-event {
+
+    margin: 0;
+    padding-top: 4%;
+    height: auto;
+    background-size: cover;
+    background-position: 45%;
+    padding-bottom: 5%;
+}
+
+
+.event-footer {
+    margin-top: 5%;
+    text-align: center;
+   
+    font-family: 'PT Sans', sans-serif;
+}
 
 .event-edit {
-    position: relative;
+    margin-top:10%;
     color: #fff;
     display: flex;
     justify-content: space-around;
-    margin-top:140%;
     font-family: 'PT Sans', sans-serif;
 }
-
-.event-footer {
-    position: absolute;
-    top: 80%;
-    left: 7%;
-    font-family: 'PT Sans', sans-serif;
-}
-
 @media(min-width:750px){
+    
+    .event-footer{
+        font-size: 2.2em
+    }
+
     .event-edit{
-        margin-top:98%;
+        margin-top:5%;
         font-size: 2.5em;
     }
 
-    .event-footer{
-        font-size: 2em;
-        left: 8%;
-        top: 82%;
-    }
 }
 
 @media(min-width:1200px){
     .event-edit{
-        position: absolute;
         width: 100%;
-        display: flex;
-
-        margin: 0;
-        bottom: 2%;
+        margin: 5%;
+        margin-left: 0;
     }
 
     .event-footer{
         font-size: 2em;
-        left: 28%;
-        top: 86%;
+        text-align: center;
     }
 
     

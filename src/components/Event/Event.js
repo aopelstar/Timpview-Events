@@ -9,6 +9,10 @@ import image from '../../images/DJ/booth.jpg';
 import { connect } from 'react-redux';
 import { updateEvent } from '../../ducks/reducer'
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
 
 
 class Event extends Component {
@@ -73,8 +77,7 @@ class Event extends Component {
 
     render() {
         return(
-            <div>
-                <img src = {image} alt="whatever" className="image-home"/>
+            <div className ="event-event" style={sectionStyle}> 
                 <Header/>
                 <E_populate groom ={this.state.groomName} bride ={this.state.brideName}
                  gPhone = {this.state.g_phone} bPhone = {this.state.b_phone} date = {this.state.date}
@@ -83,7 +86,7 @@ class Event extends Component {
                 <Link to ={ '/music'}><div className = "event-footer">Create or add to your play list by clicking here</div></Link>
                 <Playlist id ={this.props.match.params.id}/>
                 <div className = "event-edit"> 
-               <Link to = {'/createw/'}> <div>Create Event</div></Link><Link to = { '/editw/'+this.props.match.params.id}><div>Edit Event</div></Link>
+               <Link to = {'/createw/'}> <div>Create Event</div></Link><Link to = { '/editw'}><div>Edit Event</div></Link>
                 <div onClick = {() => this.delete()}>Delete Event</div>
                 </div>
 

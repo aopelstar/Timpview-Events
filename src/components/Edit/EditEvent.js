@@ -7,6 +7,12 @@ import { updateEvent, getUser, updateUser } from '../../ducks/reducer'
 
 import image from '../../images/DJ/DJ2.jpg';
 
+var sectionStyle = {
+    backgroundImage: `url(${image}`
+}
+
+
+
 class EditEvent extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +44,7 @@ class EditEvent extends Component {
 
     }
 
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
         this.setState({
             groom_name: nextProps.groom_name,
             bride_name: nextProps.bride_name,
@@ -79,48 +85,53 @@ class EditEvent extends Component {
         let promise = axios.put('/api/wedding', body)
         promise.then(() => {
             this.props.updateEvent(body);
-            this.props.history.push('/event')})
+            this.props.history.push('/event')
+        })
     }
 
 
     render() {
 
         return (
-            <div>
-                <div><img src={image} alt="whatever" className="image-home" /></div>
+            <div className="edit-event" style={sectionStyle}>
                 <Header />
                 <h1 className='edit-h1'>Edit Event</h1>
-                <div className='songs'>
-                    <div className='edit-rows' onClick={() => this.handleChange("groomTrue")}>Groom: <div className={this.state.groomTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.groom_name} onChange={(e) => this.handleChange("groom_name", e.target.value)} />
+                <div className='edit-container'>
+                    <div className='edit-rows' onClick={() => this.handleChange("groomTrue")}>Groom:
+                    {this.state.groomTrue ?
+                            <input className="edit-input" value={this.state.groom_name} onChange={(e) => this.handleChange("groom_name", e.target.value)} />
+                            :<div className="edit-text"> {this.props.groom_name} </div>}
+                        </div>
+                    <div className='edit-rows' onClick={() => this.handleChange("brideTrue")}>Bride:
+                    {this.state.brideTrue ?
+                            <input className="edit-input" value={this.state.bride_name} onChange={(e) => this.handleChange("bride_name", e.target.value)} />
+                            :<div className="edit-text"> {this.props.bride_name} </div>}
                     </div>
-                        <div className={this.state.groomTrue ? 'edit-descH' : 'edit-desc'}> {this.props.groom_name} </div>
+                    <div className='edit-rows' onClick={() => this.handleChange("gphoTrue")}>Groom's Phone:
+                    {this.state.gphoTrue ?
+                            <input className="edit-input" value={this.state.g_phone} onChange={(e) => this.handleChange("g_phone", e.target.value)} />
+                            :<div className="edit-text"> {this.props.g_phone} </div>}
                     </div>
-                    <div className='edit-rows' onClick={() => this.handleChange("brideTrue")}>Bride: <div className={this.state.brideTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.bride_name} onChange={(e) => this.handleChange("bride_name", e.target.value)} />
+                    <div className='edit-rows' onClick={() => this.handleChange("bphoTrue")}>Bride's Phone:
+                    {this.state.bphoTrue ?
+                            <input className="edit-input" value={this.state.b_phone} onChange={(e) => this.handleChange("b_phone", e.target.value)} />
+                            :<div className="edit-text"> {this.props.b_phone} </div>}
                     </div>
-                        <div className={this.state.brideTrue ? 'edit-descH' : 'edit-desc'}> {this.props.bride_name} </div>
+                    <div className='edit-rows' onClick={() => this.handleChange("dateTrue")}>Date:
+                    {this.state.dateTrue ?
+                            <input className="edit-input" value={this.state.dates} onChange={(e) => this.handleChange("dates", e.target.value)} />
+                            :<div className="edit-text"> {this.props.date} </div>}
                     </div>
-                    <div className='edit-rows' onClick={() => this.handleChange('gphoTrue')}>Groom's Phone: <div className={this.state.gphoTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.g_phone} onChange={(e) => this.handleChange("g_phone", e.target.value)} />
+                    <div className='edit-rows' onClick={() => this.handleChange("timeTrue")}>Time:
+                    {this.state.timeTrue ?
+                            <input className="edit-input" value={this.state.time_frame} onChange={(e) => this.handleChange("time_frame", e.target.value)} />
+                            :<div className="edit-text"> {this.props.time} </div>}
                     </div>
-                        <div className={this.state.gphoTrue ? 'edit-descH' : 'edit-desc'}> {this.props.g_phone} </div></div>
-                    <div className='edit-rows' onClick={() => this.handleChange('bphoTrue')}>Bride's Phone: <div className={this.state.bphoTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.b_phone} onChange={(e) => this.handleChange("b_phone", e.target.value)} />
+                    <div className='edit-rows' onClick={() => this.handleChange("venueTrue")}>Venue:
+                    {this.state.venueTrue ?
+                            <input className="edit-input" value={this.state.venue} onChange={(e) => this.handleChange("venue", e.target.value)} />
+                            :<div className="edit-text"> {this.props.venue} </div>}
                     </div>
-                        <div className={this.state.bphoTrue ? 'edit-descH' : 'edit-desc'}> {this.props.b_phone} </div></div>
-                    <div className='edit-rows' onClick={() => this.handleChange('dateTrue')}>Date: <div className={this.state.dateTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.dates} onChange={(e) => this.handleChange("dates", e.target.value)} />
-                    </div>
-                        <div className={this.state.dateTrue ? 'edit-descH' : 'edit-desc'}> {this.props.date} </div></div>
-                    <div className='edit-rows' onClick={() => this.handleChange('timeTrue')}>Time: <div className={this.state.timeTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.time_frame} onChange={(e) => this.handleChange("time_frame", e.target.value)} />
-                    </div>
-                        <div className={this.state.timeTrue ? 'edit-descH' : 'edit-desc'}> {this.props.time} </div></div>
-                    <div className='edit-rows' onClick={() => this.handleChange('venueTrue')}>Venue: <div className={this.state.venueTrue ? 'edit-desc-text' : 'edit-desc-textH'}>
-                        <input className="edit-input" value={this.state.venue} onChange={(e) => this.handleChange("venue", e.target.value)} />
-
-                    </div><div className={this.state.venueTrue ? 'edit-descH' : 'edit-desc'}> {this.props.venue} </div></div>
                 </div>
                 <div className="edit-butt-div">
                     <button className="edit-button" onClick={() => this.submit()}>Submit</button>
