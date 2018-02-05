@@ -18,7 +18,7 @@ function Splash(){
             </div>
 
 
-            <Link to ='/Home'> <div className = "login"> <button className ="button">Enter</button></div></Link>
+            <Link to ='/Home'> <div className = "login"> <button className ="splash-button">Enter</button></div></Link>
            
            </div>
         

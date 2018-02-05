@@ -88,7 +88,20 @@
 }
 
 .button{
+    background-color: #230133;
+    color: #fff;
+    align-content: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    border-color: #fff;
+    border-width: 1px;
+    text-align: center;
+    width:25%;
+    height: auto;
+    font-size: 1.75em;
+    margin-right: 0;
     padding-right: 25%;
+    
 }
 
 @media(min-width:750px){

@@ -40,13 +40,12 @@ body {
 .login {
     display: flex;
     justify-content: space-around;
-    position: absolute;
     width: 100%;
-    bottom: 20%;
+    margin-top: 90%;
 }
 
 
-.button {
+.splash-button {
 
     background-color: #230133;
     color: #fff;
@@ -59,7 +58,7 @@ body {
     width:25%;
     height: auto;
     font-size: 1.75em;
-    margin-top: 1%;
+    margin-right: 0;
     
 }
 
@@ -99,7 +98,7 @@ body {
     }
 
     
-    .button {
+    .splash-button {
         background-color: #230133;
         color: #fff;
         align-content: center;
@@ -149,7 +148,7 @@ body {
     }
     
     
-    .button {
+    .splash-button {
     
         background-color: #230133;
         padding-top: 0;

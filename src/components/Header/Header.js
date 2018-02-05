@@ -40,7 +40,7 @@ export default class Header extends Component {
            <div className ='logo'>Timpview Events</div>
         <div className = 'enter'>
             {this.state.auth_id?<a href={process.env.REACT_APP_LOGOUT}>Logout</a>:
-                                <a href='http://localhost:3030/auth'>Login</a>
+                                <a href={process.env.REACT_APP_LOGIN}>Login</a>
                 }</div>
             
             </div>
@@ -48,7 +48,7 @@ export default class Header extends Component {
             <div className={ this.state.slide ? 'menu-slide menu':'menu'}>
             <ul>{ this.state.auth_id? 
                <Link to = '/event'><li >Event</li></Link>:
-               <a href='http://localhost:3030/auth'><li>Login</li></a>}
+               <a href={process.env.REACT_APP_LOGIN}><li>Login</li></a>}
                <Link to = '/home'> <li className='list-item'>Home</li></Link>
                <Link to = '/about'> <li className='list-item'>About</li></Link>
                <Link to ='/about'><li className='list-item'>Reviews</li></Link>
