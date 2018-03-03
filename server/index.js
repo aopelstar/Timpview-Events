@@ -13,7 +13,7 @@ const checkForSession = require('./middleware/checkForSession');
 
 const app = express();
 
-app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( `${__dirname}/../build` ) ); 
 app.use( bodyParser.json());
 
 app.use(session({
@@ -58,12 +58,10 @@ passport.use(new Auth0Strategy({
 }))
 
 passport.serializeUser((id, done) => { 
-    console.log(":(:(:(:(:(:(:(:(:(:(:(::):):):):)",id)
     return done(null, id);
 })
 
-passport.deserializeUser((id, done) => { 
-    console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", id) 
+passport.deserializeUser((id, done) => {  
    app.get('db').wedding.find_wevent([id])
    .then(function(user) {
     return done(null, user[0])
@@ -109,7 +107,7 @@ app.post('/api/playlist', wController.createPlaylist)
 app.get('/api/playlist', wController.getPlaylist)
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build/index.html') );
+    res.sendFile(path.join(__dirname, '../build/index.html') ); 
 })
 
 

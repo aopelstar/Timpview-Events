@@ -3,7 +3,7 @@ import './E_populate.css'
 
 function E_populate(props){
     return(
-        <div className="copulate-container">
+        <div className="populate-container">
             <h1 className="populate-h1">Congratulations!</h1>
             <div className = 'populate'>
             <div>Congratulations! We are excited for you and can't wait for your wedding.
@@ -12,24 +12,26 @@ function E_populate(props){
             </div>
             <div className="specifics">
                 {!!props.groom && <div className="row">
-                Groom: <div className={props.textTrue? "what":"what what-hidden"}>{props.groom}</div>
+                <div className="nonProp">Groom:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.groom}</div>
                 </div>}
                 {!!props.bride && <div className="row">
-                Bride: <div className={props.textTrue? "what":"what what-hidden"}>{props.bride}</div>
+                <div className="nonProp">Bride: </div><div className={props.textTrue? "what":"what what-hidden"}>{props.bride}</div>
                 </div>}
                 {!!props.gPhone && <div className="row">
-                Groom Phone: <div className={props.textTrue? "what":"what what-hidden"}>{props.gPhone}</div>
+                <div className="nonProp">Groom Phone:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.gPhone}</div>
                 </div>}
                 
                 {!!props.bPhone && <div className="row">
-                Bride Phone: <div className={props.textTrue? "what":"what what-hidden"}>{props.bPhone}</div>
+                <div className="nonProp">Bride Phone:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.bPhone}</div>
                 </div>}
                 {!!props.date && <div className="row">
-                Date: <div className={props.textTrue? "what":"what what-hidden"}>{props.date}</div>                </div>}
+                <div className="nonProp">Date:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.date}</div>                
+                </div>}
                 {!!props.time && <div className="row">
-                Time: <div className={props.textTrue? "what":"what what-hidden"}>{props.time}</div>                </div>}
+                <div className="nonProp">Time:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.time}</div>                
+                </div>}
                 {!!props.venue && <div className="row">
-                Venue: <div className={props.textTrue? "what":"what what-hidden"}>{props.venue}</div>
+                <div className="nonProp">Venue:</div> <div className={props.textTrue? "what":"what what-hidden"}>{props.venue}</div>
                 </div>}
                 </div>
             </div>

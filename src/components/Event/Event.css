@@ -1,52 +1,83 @@
 
 .event-event {
-
-    margin: 0;
-    padding-top: 4%;
-    height: auto;
+    background: url('../../images/DJ/DJ1.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: 45%;
-    padding-bottom: 5%;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    
 }
 
 
 .event-footer {
+    font-size: 4vw;
     margin-top: 5%;
+    height: auto;
+    padding: 1% 0;
+    width: 80%;
+    border-radius: 30px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
     text-align: center;
-   
+    background-color: #011533;
     font-family: 'PT Sans', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eventCreate{
+    cursor: pointer;
 }
 
 .event-edit {
-    margin-top:10%;
+    font-size: 4vw;
+    background-color: #011533;
+    height: auto;
+    padding: 2%;
+    border-radius: 30px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    margin-top:5%;
     color: #fff;
     display: flex;
+    width: 80%;
     justify-content: space-around;
     font-family: 'PT Sans', sans-serif;
+    padding: 1% 0;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 @media(min-width:750px){
     
     .event-footer{
-        font-size: 2.2em
+        width: 70%;
+        font-size: 3vw;
+        margin-top: 0;
     }
 
     .event-edit{
-        margin-top:5%;
-        font-size: 2.5em;
+        width: 70%;
+        font-size: 3vw;
     }
 
 }
 
+
 @media(min-width:1200px){
     .event-edit{
-        width: 100%;
-        margin: 5%;
-        margin-left: 0;
+        width: 50%;
+        font-size: 2vw;
     }
 
     .event-footer{
-        font-size: 2em;
-        text-align: center;
+        width: 50%;
+        font-size: 2vw;
+        margin-top: 3%;
     }
 
     

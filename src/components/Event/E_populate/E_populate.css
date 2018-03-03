@@ -1,7 +1,6 @@
 
 .specifics {
     margin-top: 15px;
-    font-size: 1.2em;
     font-weight: bold;
     transition: .5s;
     opacity: 1;
@@ -9,41 +8,15 @@
 
 
 
-.copulate-h1 {
-    position: relative;
-    font-size: 4em;
-    color: #fff;
-    text-align: center;
-    margin-top: 7%;
-    font-family: 'Great Vibes', cursive;
-}
-
 .populate-h1 {
-    font-size: 4em;
+    font-size: 17vw;
     color: #fff;
     text-align: center;
-    margin-top: 7%;
-    margin-bottom: 10%;
+    margin-top: 10%;
     font-family: 'Great Vibes', cursive;
 }
 
-.copulate{
-    position: relative;
-    background-color: #011533;
-    width: 85%;
-    height: auto;
-    color: #fff;
-    text-align: center;
-    margin: 7%;
-    border-radius: 10%;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 1px;
-    padding: 15px;
-    font-size: 1.1em;
-    font-family: 'PT Sans', sans-serif;
-    margin-top: 10%;
-}
+
 
 
 .populate{
@@ -52,14 +25,15 @@
     height: auto;
     color: #fff;
     text-align: center;
-    margin: 7%;
-    border-radius: 10%;
+    margin: 7% auto;
+    border-radius: 30px;
     border-color: #fff;
     border-style: solid;
     border-width: 1px;
-    padding: 15px;
-    font-size: 1.1em;
+    padding: 3%;
+    font-size: 4.5vw;
     font-family: 'PT Sans', sans-serif;
+    
 }
 
 .row-hidden{
@@ -69,17 +43,24 @@
 
 .row{
     display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
     opacity: 1;
     transition: .5s;
+    font-size: 5vw;
 }
 
-.what{
-    font-size: 1em;
-    margin-left: 15px;
+.what{ 
     opacity: 1;
     transition: 1s;
+    text-align: left;
+    width: 50%;
+}
+
+.nonProp{
+    width: 60%;
+    text-align: left;
+    padding-left: 2%;
 }
 
 .what-hidden{
@@ -89,31 +70,18 @@
 
 @media(min-width: 750px){
 
-    .copulate{
-        width: 65%;
-        margin-left: 17.5%;
-        font-size: 2em;
-        margin-top: 3%;
-    }
-
-    .copulate-h1 {
-        font-size: 8.5em;
-        margin-left: 1%;
-        margin-top: 3%;
-    }
-    
-    .populate{
-        width: 75%;
-        margin-left: 13.5%;
-        font-size: 1.85em;
-        margin-top: 2%;
-    }
-
     .populate-h1 {
-        margin-top: 2%;
-        font-size: 8.5em;
-        margin-bottom: 3%;
-        margin-top: 3%;
+        font-size: 15vw;     
+    }
+
+    .populate{
+        width: 70%;
+        font-size: 3.5vw;
+        margin:4% auto;
+    }
+
+    .row{
+        font-size:3.5vw;
     }
 
 
@@ -122,39 +90,22 @@
 
 @media(min-width: 1200px){
 
-    .copulate-container{
-       margin-top: 7%;
-    }
-    .copulate-h1{
-        
-    }
+   
 
     .populate-h1{
-        margin-top: 1%;
-        margin-bottom: 20px;
-    }
-
-    .copulate{
-        margin-top: 5%;
-        width: 50%;
-        margin-left: 25%;
-        font-size: 1.5em;
-        margin-bottom: 0;
+        font-size: 12vw;
+        
     }
 
     .populate{
         margin-top: 3%;
-        width: 35%;
-        margin-left: 32.5%;
-        font-size: 1.5em;
-        margin-bottom: 0;
+        width: 50%;
+        font-size: 2vw;
+        padding: 4%;
         
     }
-
     .row{
-       justify-content: space-between;
-       margin-left: 10%;
-       margin-right: 10%;
+        font-size: 2vw
     }
 
     .what{

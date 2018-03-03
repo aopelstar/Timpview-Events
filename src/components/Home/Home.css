@@ -1,46 +1,50 @@
-/*this is for page transitions only*/
-.home-app-hidden{
-    position:absolute;
-    left: 200%;
-    transition: .5s;
-    z-index: -5;
-}
 
-.home-app{
-    position:absolute;
-    transition: .5s;
-    z-index: -5;
-}
-/*everything below effects the home page*/
 
+
+.home{
+    margin: 0;
+    padding-top: 4%;
+    background: url('../../images/IMG_3578.jpg');
+    background-size: cover;
+    height: 100vh;
+
+}
 
 .force{
-    position: relative;
     margin-top: 125%;
 }
 .byline {
     color: #fff;
      font-family: 'Great Vibes', cursive;
     margin-left: 5%;
-    font-size: 3.2em;
+    font-size: 15vw;
 }
 
 .byline2 {
     color: #fff;
     font-family: 'Great Vibes', cursive;
-    margin-left: 20%;
-    font-size: 3em;
+    margin-left: 18%;
+    font-size: 14vw;
+}
+
+@media(min-width: 650px){
+    .force{
+        margin-top: 20%;
+        margin-left: 60%;
+        
+    }
+
+    .byline{
+        font-size:7vw;
+    }
+
+    .byline2 {
+        font-size: 6vw;
+        margin-left: 0%;
+    }
 }
 
 
-.home{
-    margin: 0;
-    padding-top: 4%;
-    height: 667px;
-    background-size: cover;
-    background-position: 45% 
-
-}
 
 
 /*This effects the entire home page component at ipad size*/
@@ -48,64 +52,41 @@
 @media(min-width: 750px){
 
     .force{
-        margin-top: 75%;
+        margin-top: 80%;
+        margin-left: 15%;
     }
 
    .byline {
         margin-left: 10%;
-        font-size: 7em;
-        margin-bottom: 10px;
-        color: #fff;
-        font-family: 'Great Vibes', cursive;
+        font-size: 16vw;
     }
     
     .byline2 {
-        color: #fff;
-        font-family: 'Great Vibes', cursive;
         margin-left: 25%;
-        font-size: 6em;
+        font-size:10vw;
     }
 
-    
-    .home{
-        margin: 0;
-        width: 100%;
-        height: 1024px;
-        background-size: cover;
-        background-position: 40%;
-        padding-top: 2%;
-    
+
+}
+
+@media(min-width: 1000px){
+    .force{
+        margin-top: 40%;
     }
 
+    .byline{
+        font-size: 10vw;
+    }
+
+    .byline2{
+        font-size: 9vw;
+    }
 }
 
 /*The entire home page at full desktop size*/
 
 @media(min-width: 1200px){
     .force{
-        margin-top: 35%;
+        margin-top: 45%;
     }
-
-   .line {
-        color: #fff;
-        font-family: 'Great Vibes', cursive;
-        font-weight: bold;
-        margin-top: 32%;
-    }
-    
-    .byline {
-        margin-left: 10%;
-        font-size: 7em;
-        margin-bottom: 45px;
-    }
-    
-    .byline2 {
-        margin-left: 25%;
-        font-size: 6em;
-    }
-
-    .home{
-        height: 800px;
-    }
-
 }

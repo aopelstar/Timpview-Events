@@ -2,14 +2,8 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import './Create.css';
 import axios from 'axios';
-import image from '../../images/DJ/spinny_light.jpg';
 import { connect } from 'react-redux';
 import { updateEvent, getUser } from '../../ducks/reducer'
-
-var sectionStyle = {
-    backgroundImage: `url(${image}`
-}
-
 
 
 class Create_wed extends Component {
@@ -60,7 +54,7 @@ class Create_wed extends Component {
     render(){
         this.props.getUser()
         return(
-            <div className ="create-event" style={sectionStyle}> 
+            <div className ="create-event">
                  <Header/>
                 <div className = 'create-container'>
                 <h1 className="create-h1">Create Your Wedding</h1>

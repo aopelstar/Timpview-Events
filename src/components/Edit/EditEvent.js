@@ -4,12 +4,7 @@ import Header from '../Header/Header';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { updateEvent, getUser, updateUser } from '../../ducks/reducer'
-
-import image from '../../images/DJ/DJ2.jpg';
-
-var sectionStyle = {
-    backgroundImage: `url(${image}`
-}
+;
 
 
 
@@ -93,7 +88,7 @@ class EditEvent extends Component {
     render() {
 
         return (
-            <div className="edit-event" style={sectionStyle}>
+            <div className="edit-event">
                 <Header />
                 <h1 className='edit-h1'>Edit Event</h1>
                 <div className='edit-container'>

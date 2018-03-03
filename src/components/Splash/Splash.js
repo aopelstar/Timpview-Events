@@ -3,13 +3,9 @@ import './Splash.css';
 import image from '../../images/splash.jpg';
 import {Link} from 'react-router-dom';
 
-var sectionStyle = {
-    backgroundImage: `url(${image}`
-}
-
 function Splash(){
     return(
-        <div className="splash" style={ sectionStyle }>
+        <div className="splash">
             
         <div className='header-container'>
             <div className = "header">

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-// import './Create.css';
+import './Create.css';
 import axios from 'axios';
-import image from '../../images/DJ/spinny_light.jpg'
 
 
 export default class Create_wed extends Component {
@@ -47,7 +46,6 @@ export default class Create_wed extends Component {
     render(){
         return(
             <div>
-                 <img src = {image} alt="whatever" className="image-home"/>
                 <Header/>
                 <div className="create-container-c">
                 <h1 className="create-h1">Create Your Party</h1>

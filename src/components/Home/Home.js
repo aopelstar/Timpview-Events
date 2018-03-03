@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import '../../Reset.css'
 import './Home.css';
-import image from '../../images/IMG_3578.jpg';
 import Header from '../Header/Header';
 
-var sectionStyle = {
-    backgroundImage: `url(${image}`
-}
+
 
 
 export default class Home extends Component {
@@ -28,7 +25,7 @@ export default class Home extends Component {
     render(){
         return(
         //    <div className ={this.state.page?"home-app":"home-app-hidden"}>  this isn't working yet
-        <div className ="home" style={sectionStyle}>  
+        <div className ="home">  
                <Header/>
 
 

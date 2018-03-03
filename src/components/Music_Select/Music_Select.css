@@ -1,42 +1,47 @@
 .music{
     margin: 0;
+    background: url('../../images/DJ/spinny_light.jpg') no-repeat center center fixed;
     padding-top: 4%;
-    height: 667px;
+    min-height: 100vh;
+    height: auto;
     background-size: cover;
-    background-position: 45% 
+    background-position: 45%; 
+    padding-bottom: 4%;
+}
 
+.music-h1 {
+    font-size: 20vw;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'Great Vibes', cursive;
 }
 
 .songs {
     background-color: #011533;
     width: 85%;
-    height: 275px;
+    min-height: 275px;
+    height: auto;
     color: #fff;
     text-align: center;
-    margin: 7%;
-    border-radius: 10%;
+    margin: 7% auto 0 auto;
+    border-radius: 30px;
     border-color: #fff;
     border-style: solid;
     border-width: 1px;
-    padding: 15px;
-    font-size: 1em;
+    padding: 3%;
+    font-size: 4.5vw;
     font-family: 'PT Sans', sans-serif;
+    cursor: pointer;
 }
 
-.music-h1 {
-    font-size: 4em;
-    color: #fff;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    font-family: 'Great Vibes', cursive;
-}
+
 
 
 
 
 .titles {
-    margin-bottom: 20px;
+    margin: 0 1% 20px 1%;
     
 }
 
@@ -45,7 +50,7 @@
 }
 
 .arrows {
- margin-top: 10%;
+ margin: 10% 5% 0 5%;
 display: flex;
 justify-content: space-between;
 
@@ -55,75 +60,65 @@ justify-content: space-between;
 .arrow1 {
     height: 50px;
     transform: scaleX(-1);
-    margin: 7%;
-    
+    cursor: pointer;
     
 }
 
 .arrow2 {
     height: 50px;
-    margin: 7%;
+    cursor: pointer;
 }
 
 .songs-btn {
-
+    cursor: pointer;
     background-color: #230133;
     color: #fff;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 6.5vw;
     border-color: #fff;
     border-width: 1px;
     text-align: center;
     width:30%;
-    height: 35px;
-    margin-top: 4%;
-    
+    height: 50px;
+}
 
-    
+@media(min-width:650px){
+    .music-h1{
+        font-size:12vw;
+    }
+
+    .songs{
+        font-size: 3vw;
+        min-height: 350px;
+        height: auto;
+    }
 }
 
 @media(min-width:750px){
 
-    .music{
-        margin: 0;
-        width: 100%;
-        height: 1024px;
-        background-size: cover;
-        background-position: 40%;
-        padding-top: 2%;
-    }
-
 
     .songs {
-        font-size: 2em;
-        margin-top: 0;
-        height: 450px;
-        margin-bottom: 1%;
-        width: 75%;
-        margin-left: 12.5%;
+        font-size: 4vw;
+        min-height: 450px;
+        height: auto;
+        width: 70%;
     }
 
     .music-h1 {
-        margin-bottom: 1%;
-        font-size: 9em;
+        font-size: 15vw
     }
 
     .songs-btn{
-        height: 75px;
-        font-size: 2em;
+        height: 100px;
+        font-size: 6vw;
     }
 
-    .arrows{
-        margin-top: 0;
-    }
 
     .arrow1 {
         height: 100px;
         transform: scaleX(-1);
-        
-        
-        
+       
     }
     
     .arrow2 {
@@ -131,63 +126,41 @@ justify-content: space-between;
     }
 }
 
+@media(min-width: 1000px){
+    .songs {
+        min-height: 550px;
+        height: auto;
+    }
+}
+
 @media(min-width:1200px){
 
-    .music{
-         height: 800px;
-    }
 
 
     .music-h1{
-        margin-top: 8%;
+        font-size: 12vw
     }
 
     .songs{
-        margin: 0;
-        width: 30%;
-        height: 375px;
-        margin-left: 35%;
-        
-        font-size: 1.5em;
-    }
-
-    .arrows{
-        margin: 0;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .background-weird{
-        background: transparent;
-        border: 0;
-        margin-left: 4%;
-        margin-right: 5%;
+        width: 50%;
+        min-height: 400px;
+        height: auto;
+        font-size: 2vw;
     }
 
     .arrow1{
-        margin-right: 50%;
+        margin-left: 70%;
     }
 
     .arrow2{
-        background:transparent;
-        border:0;
+       margin-right: 70%;
     }
 
     .songs-btn{
-        margin-top: 1%;
-        background-color: #230133;
-        padding-top: 0;
-        color: #fff;
-        align-content: center;
-        font-family: 'PT Sans', sans-serif;
-        font-weight: bold;
-        border-color: #fff;
-        border-width: 1px;
-        text-align: center;
+       
         width:15%;
         height: auto;
         font-size: 3em;
-        padding-bottom: 0;
     }
     
 }

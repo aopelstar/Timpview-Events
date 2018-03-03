@@ -5,22 +5,22 @@
     height: auto;
     color: #fff;
     text-align: center;
-    margin: 7%;
-    border-radius: 10%;
+    margin: 7% auto 0% auto;
+    border-radius: 30px;
     border-color: #fff;
     border-style: solid;
     border-width: 1px;
-    padding: 15px;
-    font-size: 1em;
+    padding: 3%;
+    font-size: 7vw;
     font-family: 'PT Sans', sans-serif;
 }
 
 .playlist-h1 {
-    font-size: 4em;
+    font-size: 18vw;
     color: #fff;
     text-align: center;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     font-family: 'Great Vibes', cursive;
 }
 
@@ -32,28 +32,37 @@
     display: initial;
 }
 
+@media(min-width:650px){
+    .playlist-h1{
+        font-size: 15vw;
+    }
+
+    .playlist-songs{
+        font-size: 4vw;
+    }
+}
+
 @media(min-width: 750px){
     .playlist-h1{
-        font-size: 8.5em;
+        font-size: 15vw;
 
     }
 
     .playlist-songs {
-        width: 65%;
-        margin-left: 17.5%;
-        font-size: 1.75em;
-        margin-top: 1%;
+        width: 70%;
+        font-size: 5vw;
     }
 }
 
 @media(min-width: 1200px){
     
+    .play-list-h1{
+        font-size: 12vw;
+    }
 
     .playlist-songs{
-        margin-top: 2%;
-        width: 35%;
-        margin-left: 32.5%;
-        font-size: 1.5em;
+        width: 50%;
+        font-size: 3vw;
         margin-bottom: 0;
     }
 }

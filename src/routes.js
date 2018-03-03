@@ -1,6 +1,5 @@
 import React from 'react';
 import {HashRouter,Switch, Route} from 'react-router-dom';
-import {spring, AnimatedSwitch } from 'react-router-transition';
 import Splash from './components/Splash/Splash';
 import Welcome from './components/Home/Home';
 import About from './components/About/About';
@@ -19,11 +18,7 @@ import Header from './components/Header/Header'
     
 export default (
     <HashRouter>
-     <AnimatedSwitch 
-     atEnter={{ opacity: 0 }}
-    atLeave={{ opacity: 0 }}
-    atActive={{ opacity: 1 }}
-    className="switch-wrapper"
+     <Switch
     > 
         <Route exact path = '/' component = { Splash } />
         <Route path = '/home' component = { Welcome } />
@@ -38,7 +33,7 @@ export default (
         <Route path = '/editw' component = { EditEvent } />
         <Route path = '/editc/:id' component = { EditCevent } />
         <Route path = '' component = {Header }/>
-     </AnimatedSwitch> 
+     </Switch> 
         </HashRouter>
 
 )

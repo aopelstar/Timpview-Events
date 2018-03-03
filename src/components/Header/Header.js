@@ -39,8 +39,9 @@ export default class Header extends Component {
            <div className = 'ham-menu' onClick = {() => this.hamburger()}><img src = { hamburger } alt="whatevs" className = "hamburger"/></div>
            <div className ='logo'>Timpview Events</div>
         <div className = 'enter'>
-            {this.state.auth_id?<a href={process.env.REACT_APP_LOGOUT}>Logout</a>:
-                                <a href={process.env.REACT_APP_LOGIN}>Login</a>
+            {this.state.auth_id?
+            <a href={process.env.REACT_APP_LOGOUT}>Logout</a>:
+            <a href={process.env.REACT_APP_LOGIN}>Login</a>
                 }</div>
             
             </div>
