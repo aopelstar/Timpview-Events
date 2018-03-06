@@ -4,6 +4,7 @@
 .home{
     margin: 0;
     padding-top: 4%;
+    padding-bottom: 4%;
     background: url('../../images/IMG_3578.jpg');
     background-size: cover;
     min-height: 100vh;

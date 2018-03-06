@@ -81,6 +81,7 @@ justify-content: space-between;
     text-align: center;
     width:30%;
     height: 50px;
+    border-radius: 10px;
 }
 
 @media(min-width:650px){
